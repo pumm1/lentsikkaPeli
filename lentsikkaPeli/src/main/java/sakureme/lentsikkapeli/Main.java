@@ -5,17 +5,12 @@
  */
 package sakureme.lentsikkapeli;
 
-/**
- *
- * @author Sagu
- */
 public class Main {
 
-    /**
-     * @param args the command line arguments
+    /*
+    Ohjelman käynnistys täältä
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         System.out.println("testi");
     }
     
