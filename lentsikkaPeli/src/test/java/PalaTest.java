@@ -26,8 +26,9 @@ public class PalaTest {
         pala2 = new Pala(30, 30, 30, 30);
     }
 
+    //testi1
     @Test
-    public void konstruktoriAsettaaArvotOikein() {
+    public void konstruktoriToimiiOikein() {
         int x1 = pala1.getX();
         int y1 = pala1.getY();
         assertEquals(10, x1);
@@ -50,16 +51,19 @@ public class PalaTest {
         assertEquals(30, w2);
         assertEquals(30, h2);
     }
-    
-    public void palatTunnistavatOsumanKeskella(){
+
+    //testi2
+    @Test
+    public void palatTunnistavatOsumanKeskella() {
         boolean osuma;
-        
+
         pala1.liikuX(5);
         pala1.liikuY(10);
         osuma = pala1.osuuko(pala2);
         assertEquals(true, osuma);
     }
 
+    //testi3
     @Test
     public void palatTunnistavatOsumanVasen() {
         boolean osuma = pala1.osuuko(pala2);        //x-suunnassa pala1 pala2:n vasemmalla reunalla
@@ -71,6 +75,7 @@ public class PalaTest {
 
     }
 
+    //testi4
     @Test
     public void palatTunnistavatOsumanOikea() {
         boolean osuma;
@@ -84,6 +89,7 @@ public class PalaTest {
         assertEquals(false, osuma);
     }
 
+    //testi5
     @Test
     public void palatTunnistavatOsumanAlhaalla() {
         pala2.liikuY(20);   //siirretään pala2 y-suunnassa pala1:n alareunaan kiinni
@@ -96,6 +102,7 @@ public class PalaTest {
 
     }
 
+    //testi6
     @Test
     public void palatTunnistavatOsumanYlhaalla() {
         boolean osuma;
@@ -107,6 +114,48 @@ public class PalaTest {
         pala2.liikuY(-1);       //siiretään reunasta irti
         osuma = pala1.osuuko(pala2);
         assertEquals(false, osuma);     //eipäs osukaan enää!
+    }
+
+    //testi7
+    @Test
+    public void liikkuminenToimiiX() {
+        int x1;
+        int x2;
+
+        pala1.liikuX(15);
+        x1 = pala1.getX();
+        assertEquals(25, x1);
+        
+        pala1.liikuX(-20);
+        x1 = pala1.getX();
+        assertEquals(5, x1);
+        
+        pala2.liikuX(-20);
+        x2 = pala2.getX();
+        assertEquals(10, x2);
+        
+        pala2.liikuX(52);
+        x2 = pala2.getX();
+        assertEquals(62, x2);
+    }
+    
+    //testi8
+    @Test
+    public void liikkuminenToimiiY(){
+        int y1;
+        int y2;
+        
+        pala1.liikuY(10);
+        y1 = pala1.getY();
+        assertEquals(30, y1);
+        
+        pala1.liikuY(-8);
+        y1 = pala1.getY();
+        assertEquals(22, y1);
+        
+        pala2.liikuY(-19);
+        y2 = pala2.getY();
+        assertEquals(11, y2);
     }
 
 }
