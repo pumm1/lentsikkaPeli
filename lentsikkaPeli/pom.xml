@@ -51,7 +51,7 @@
                         <param>sakureme.logiikka.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>com.your.package.root*</param>
+                        <param>sakureme.logiikka.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
