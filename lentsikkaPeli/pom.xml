@@ -48,10 +48,10 @@
                 <version>1.1.8</version>
                 <configuration>
                     <targetClasses>
-                        <param>sakureme.logiikka.*</param>
+                        <param>/sakureme.logiikka.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>sakureme.logiikka.*</param>
+                        <param>/sakureme.logiikka.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
