@@ -6,5 +6,10 @@ pelaaja voi nostaa korkeutta hiukan nappia painamalla.
 Lentokoneen ilmassapitoa vaikeuttavat erilaiset esteet, kuten puiden latvat 
 ja linnut.
 
+Hahmot koostuvat palasista, jotka kuvaavat hahmojen osuma-alaa tai 
+"hitboxeja". Ensimmäisessä toimivassa versiossa  tarkoituksena on vain
+piirtää nämä palaset, mutta myöhemmässä vaiheessa palaset pyritään
+korvaamaan .png-muodossa olevilla kuvilla.
+
 ##Luokkakaavio
 ![Luokkakaavio](luokkakaavio.png)
