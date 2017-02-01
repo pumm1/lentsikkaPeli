@@ -18,18 +18,25 @@ public class Kayttoliittyma implements Runnable {
     private int leveys;
     private int korkeus;
     private List<Hahmo> hahmot;
-    public Kayttoliittyma(int w, int h) {
+    
+    //kustomoitava koko ikkunalle konstruktorissa
+    public Kayttoliittyma(int w, int h) {   
         leveys = w;
         korkeus = h;
     }
     
-    public Kayttoliittyma(){
+     //oletusarvoinen koko ikkunalle konstruktorissa
+    public Kayttoliittyma(){       
         leveys = 640;
         korkeus = 480;
     }
     
     public void lisaaHahmot(List<Hahmo> i){
         hahmot = i;
+    }
+    
+    public JFrame getFrame(){
+        return frame;
     }
 
     private void luoKomponentit(Container c) {
@@ -45,6 +52,8 @@ public class Kayttoliittyma implements Runnable {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         luoKomponentit(frame.getContentPane());
+        
+        frame.pack();
         frame.setVisible(true);
     }
 

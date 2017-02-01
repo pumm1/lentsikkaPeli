@@ -151,48 +151,84 @@ public class HahmoTest {
                     oikein = true;
                 }
             } else if (x == 20 && y == 20) {
-                if (c == 1){
+                if (c == 1) {
                     oikein = false;
                     break;
-                }else{
+                } else {
                     c++;
                     oikein = true;
                 }
-            }else{
+            } else {
                 oikein = false;
                 break;
             }
         }
-        
-        if (a == 1 && b == 1 && c == 1){
+
+        if (a == 1 && b == 1 && c == 1) {
             oikein = true;
-        }else{
+        } else {
             oikein = false;
         }
 
         assertEquals(true, oikein); //hahmo1:n oikeellisuus
     }
-    
+
+    //testi 11
     @Test
-    public void hahmonOsumaTunnistetaan(){
+    public void hahmonOsumaTunnistetaan() {
         boolean osuma = hahmo2.osuu(hahmo1);
         assertEquals(false, osuma);     //hahmojen ei pitäisi osua aloituspaikoillaan
-        
+
         hahmo2.liikuX(-1);
-        
+
         osuma = hahmo2.osuu(hahmo1);
         assertEquals(true, osuma);  //hahmojen pitäisi osua
-        
+
         hahmo2.liikuY(1);   //irrotetaan y-suunnassa
         osuma = hahmo2.osuu(hahmo1);
         assertEquals(false, osuma);
-        
+
         hahmo2.liikuX(-9);
         osuma = hahmo2.osuu(hahmo1);    //rajalle, ei osu
         assertEquals(false, osuma);
-        
+
         hahmo2.liikuX(-1);
         osuma = hahmo2.osuu(hahmo1);
         assertEquals(true, osuma);
+    }
+
+    //testi12
+    @Test
+    public void palanLisaaminenToimii() {
+        hahmo1.lisaaPala(new Pala(40, 40, 10, 10));
+        int p1 = hahmo1.getPalat().size();
+        assertEquals(4, p1); //paloja pitäisi olla 4
+
+        hahmo2.lisaaPala(new Pala(30, 30, 30, 30));
+        hahmo2.lisaaPala(new Pala(90, 90, 10, 10));
+        int p2 = hahmo2.getPalat().size();
+        assertEquals(3, p2);    //paloja pitäisi olla 3
+    }
+
+    //testi13
+    @Test
+    public void palojenLisaaminenToimii() {
+        Pala p1 = new Pala(50, 50, 30, 30);
+        Pala p2 = new Pala(40, 40, 30, 30);
+        Pala p3 = new Pala(90, 90, 10, 10);
+        List<Pala> palat = new ArrayList<>();
+        palat.add(p1);
+        palat.add(p2);
+        palat.add(p3);
+
+        hahmo1.lisaaPaloja(palat);
+        int p = hahmo1.getPalat().size();
+        assertEquals(6, p);     //paloja 3 + 3
+
+        Pala p4 = new Pala(10, 60, 10, 10);
+        palat.add(p4);
+        hahmo2.lisaaPaloja(palat);
+        p = hahmo2.getPalat().size();
+        assertEquals(5, p);     //paloja  1 + 4
     }
 }
