@@ -34,7 +34,7 @@ public class HahmoTest {
         palat.add(p3);
 
         hahmo1 = new Hahmo(palat);
-        hahmo2 = new Hahmo(50, 20, 10, 10);
+        hahmo2 = new Hahmo(31, 20, 10, 10);
 
     }
 
@@ -95,7 +95,7 @@ public class HahmoTest {
         a = 0;          //varmistetaan, ettei hahmo2 sisällä ylimääräisiä paloja
 
         for (Pala i : palat) {
-            if (i.getX() == 50 && i.getY() == 20) {
+            if (i.getX() == 31 && i.getY() == 20) {
                 oikein = true;
                 if (a == 1) {
                     oikein = false;
@@ -171,5 +171,28 @@ public class HahmoTest {
         }
 
         assertEquals(true, oikein); //hahmo1:n oikeellisuus
+    }
+    
+    @Test
+    public void hahmonOsumaTunnistetaan(){
+        boolean osuma = hahmo2.osuu(hahmo1);
+        assertEquals(false, osuma);     //hahmojen ei pitäisi osua aloituspaikoillaan
+        
+        hahmo2.liikuX(-1);
+        
+        osuma = hahmo2.osuu(hahmo1);
+        assertEquals(true, osuma);  //hahmojen pitäisi osua
+        
+        hahmo2.liikuY(1);   //irrotetaan y-suunnassa
+        osuma = hahmo2.osuu(hahmo1);
+        assertEquals(false, osuma);
+        
+        hahmo2.liikuX(-9);
+        osuma = hahmo2.osuu(hahmo1);    //rajalle, ei osu
+        assertEquals(false, osuma);
+        
+        hahmo2.liikuX(-1);
+        osuma = hahmo2.osuu(hahmo1);
+        assertEquals(true, osuma);
     }
 }

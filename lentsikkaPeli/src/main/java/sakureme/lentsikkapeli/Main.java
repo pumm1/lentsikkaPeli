@@ -8,6 +8,8 @@ package sakureme.lentsikkapeli;
 import sakureme.logiikka.Hahmo;
 import sakureme.logiikka.Pala;
 import java.util.*;
+import javax.swing.SwingUtilities;
+import sakureme.kayttoliittyma.Kayttoliittyma;
 
 public class Main {
 
@@ -15,6 +17,21 @@ public class Main {
     Ohjelman käynnistys täältä
      */
     public static void main(String[] args) {
+        
+        Kayttoliittyma kayttis = new Kayttoliittyma();
+        Pala p1 = new Pala(20, 20, 10, 10);
+        Pala p2 = new Pala(20, 30, 10, 10);
+        Pala p3 = new Pala(30, 30, 10, 10);
+        List<Pala> palat = new ArrayList<>();
+        List<Hahmo> hahmot = new ArrayList<>();
+        palat.add(p1);
+        palat.add(p2);
+        palat.add(p3);
+        Hahmo h1 = new Hahmo(palat);
+        hahmot.add(h1);
+        kayttis.lisaaHahmot(hahmot);
+        
+        SwingUtilities.invokeLater(kayttis);
         
     }
 
