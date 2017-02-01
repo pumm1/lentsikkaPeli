@@ -33,6 +33,7 @@ public class Main {
         Hahmo h2 = new Hahmo(60, 60, 10, 10);
         hahmot.add(h1);
         hahmot.add(h2);
+        h2.setPutoavuus(true);
         kayttis.setPelattavaHahmo(h2);
         kayttis.lisaaHahmot(hahmot);
         SwingUtilities.invokeLater(kayttis);
