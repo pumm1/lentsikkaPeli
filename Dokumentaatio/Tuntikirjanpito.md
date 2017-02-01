@@ -8,3 +8,4 @@ Päivä | Tunnit | Kuvaus
 26.01.2017 |1,0h| Luokkakaavion tekemistä ja PIT-juttujen korjailua (ei toimi)
 26.01.2017 |1,0h| PIT-raportti ja checkstyle-raportti
 29.01.2016 |0,5h| Käyttöliittymän ja piirtoalustan valmistelua
+01.02.2016 |0,5h| Testien päivittelyä jatkoa varten
