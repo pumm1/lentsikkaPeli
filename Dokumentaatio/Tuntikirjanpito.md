@@ -10,3 +10,4 @@ Päivä | Tunnit | Kuvaus
 29.01.2016 |0,5h| Käyttöliittymän ja piirtoalustan valmistelua
 01.02.2016 |0,5h| Testien päivittelyä jatkoa varten
 01.02.2016 |0,5h| Testien viimeistelyä, käyttöliittymän valmistelua ja PIT
+01.02.2016 |1,0h| Hahmon liikuttelu nyt mahdollista piirtoalustalla

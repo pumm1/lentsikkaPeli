@@ -6,6 +6,7 @@ import java.awt.Container;
 import java.util.*;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
+import sakureme.kuuntelija.Kuuntelija;
 import sakureme.logiikka.Hahmo;
 
 /*
@@ -18,11 +19,16 @@ public class Kayttoliittyma implements Runnable {
     private int leveys;
     private int korkeus;
     private List<Hahmo> hahmot;
+    private Hahmo hahmo;
     
     //kustomoitava koko ikkunalle konstruktorissa
     public Kayttoliittyma(int w, int h) {   
         leveys = w;
         korkeus = h;
+    }
+    
+    public void setPelattavaHahmo(Hahmo i){
+        hahmo = i;
     }
     
      //oletusarvoinen koko ikkunalle konstruktorissa
@@ -42,6 +48,8 @@ public class Kayttoliittyma implements Runnable {
     private void luoKomponentit(Container c) {
         alusta = new Piirtoalusta(hahmot);
         c.add(alusta);
+        
+        frame.addKeyListener(new Kuuntelija(hahmo, alusta));
     }
 
     @Override

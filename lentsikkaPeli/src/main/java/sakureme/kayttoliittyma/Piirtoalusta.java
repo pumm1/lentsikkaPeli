@@ -17,7 +17,7 @@ public class Piirtoalusta extends JPanel implements ActionListener{
     private List<Hahmo> hahmot;
     
     public Piirtoalusta(List<Hahmo> a){
-        super.setBackground(Color.blue);
+        super.setBackground(Color.white);
         hahmot = a;
         
         
