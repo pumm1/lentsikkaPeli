@@ -231,4 +231,79 @@ public class HahmoTest {
         p = hahmo2.getPalat().size();
         assertEquals(5, p);     //paloja  1 + 4
     }
+
+    //testi14
+    @Test
+    public void hahmonPutoaminenToimii() {
+        boolean putoaa = hahmo2.getPutoaa();
+        assertEquals(false, putoaa);        //oletuksena ei putoa
+
+        hahmo2.setPutoavuus(true);
+        putoaa = hahmo2.getPutoaa();
+        assertEquals(true, putoaa);
+
+        hahmo2.putoa();
+        List<Pala> palat = hahmo2.getPalat();
+
+        int x = palat.get(0).getX();
+        int y = palat.get(0).getY();
+
+        assertEquals(31, x);        //eka putoaminen ei vielä muuta koordinaatteja alkkuperäiseen, koska dy = 0
+        assertEquals(20, y);
+
+        hahmo2.putoa();
+        hahmo2.putoa();
+
+        palat = hahmo2.getPalat();
+        x = palat.get(0).getX();
+        y = palat.get(0).getY();
+
+        assertEquals(31, x);
+        assertEquals(23, y);
+
+        hahmo2.putoa();
+        hahmo2.putoa();
+        hahmo2.putoa();     //dy saavuttaa maksiminsa
+        hahmo2.putoa();
+
+        palat = hahmo2.getPalat();
+
+        x = palat.get(0).getX();
+        y = palat.get(0).getY();
+
+        assertEquals(31, x);
+        assertEquals(40, y);
+
+        hahmo2.setPutoavuus(false);
+
+        hahmo2.putoa();
+        x = palat.get(0).getX();
+        y = palat.get(0).getY();
+
+        assertEquals(31, x);
+        assertEquals(40, y);
+
+    }
+
+    //testi15
+    @Test
+    public void hahmonHyppaaminenToimii() {
+        hahmo2.setPutoavuus(true);
+        int dy = hahmo2.getDy();
+        assertEquals(0, dy);
+        hahmo2.hyppaa();
+
+        dy = hahmo2.getDy();
+        assertEquals(-7, dy);
+        hahmo2.putoa();
+        hahmo2.putoa();
+        dy = hahmo2.getDy();
+        assertEquals(-5, dy);
+        for (int i = 0; i < 20; i++) {
+            hahmo2.putoa();
+        }
+        dy = hahmo2.getDy();
+
+        assertEquals(5, dy);
+    }
 }

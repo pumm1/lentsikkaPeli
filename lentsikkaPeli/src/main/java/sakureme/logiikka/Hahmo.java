@@ -20,26 +20,6 @@ public class Hahmo {
         putoaa = false;
     }
 
-    public void hyppaa() {
-        dy = 5;
-    }
-
-    public void setPutoavuus(boolean i) {
-        putoaa = i;
-    }
-
-    public void putoa() {
-
-        if (putoaa) {   //turhaan toteuttaa ylimääräistä työtä, jos hahmoa ei ole määritelty putoavaksi
-            for (Pala i : palat) {
-                i.liikuY(dy);
-            }
-            if (dy < 5) {
-                dy++;
-            }
-        }
-    }
-
     //konstruktori hahmolle, jolle annetaan heti kaikki palat
     public Hahmo(List<Pala> i) {
 
@@ -47,6 +27,14 @@ public class Hahmo {
     }
 
     /////getterit////////
+    public int getDy() {
+        return dy;
+    }
+
+    public boolean getPutoaa() {
+        return putoaa;
+    }
+
     public List<Pala> getPalat() {
 
         return palat;
@@ -66,6 +54,27 @@ public class Hahmo {
     }
 
     ///////hahmon logiikka////////
+    //koordinaatisto "väärinpäin", joten hypyssä suunta negatiivinen
+    public void hyppaa() {
+        dy = -7;
+    }
+
+    public void setPutoavuus(boolean i) {
+        putoaa = i;
+    }
+
+    public void putoa() {
+
+        if (putoaa) {   //turhaan toteuttaa ylimääräistä työtä, jos hahmoa ei ole määritelty putoavaksi
+            for (Pala i : palat) {
+                i.liikuY(dy);
+            }
+            if (dy < 5) {
+                dy++;
+            }
+        }
+    }
+
     //tarkistetaan, osuuko Hahmo toiseen hahmoon
     public boolean osuu(Hahmo i) {
 

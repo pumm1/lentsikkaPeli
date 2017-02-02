@@ -34,6 +34,8 @@ public class Kuuntelija implements KeyListener {
             hahmo.liikuX(-3);
         }else if (e.getKeyCode() == KeyEvent.VK_RIGHT){
             hahmo.liikuX(3);
+        }else if (e.getKeyCode() == KeyEvent.VK_UP){
+            hahmo.hyppaa();
         }
         
         component.repaint();
