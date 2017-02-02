@@ -12,3 +12,4 @@ Päivä | Tunnit | Kuvaus
 01.02.2016 |0,5h| Testien viimeistelyä, käyttöliittymän valmistelua ja PIT
 01.02.2016 |1,0h| Hahmon liikuttelu nyt mahdollista piirtoalustalla
 01.02.2016 |0,5h| hahmon putoavuus toteutettu
+02.02.2016 |1,0h| hahmon putamisen säätely, sen testit ja checkstyle
