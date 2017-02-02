@@ -17,9 +17,9 @@ public class Main {
     Ohjelman käynnistys täältä
      */
     public static void main(String[] args) {
-        
+
         Kayttoliittyma kayttis = new Kayttoliittyma();
-        
+
         Pala p1 = new Pala(20, 20, 10, 10);
         Pala p2 = new Pala(20, 30, 10, 10);
         Pala p3 = new Pala(30, 30, 10, 10);
@@ -28,7 +28,7 @@ public class Main {
         palat.add(p1);
         palat.add(p2);
         palat.add(p3);
-        
+
         Hahmo h1 = new Hahmo(palat);
         Hahmo h2 = new Hahmo(60, 60, 10, 10);
         hahmot.add(h1);
@@ -37,7 +37,7 @@ public class Main {
         kayttis.setPelattavaHahmo(h2);
         kayttis.lisaaHahmot(hahmot);
         SwingUtilities.invokeLater(kayttis);
-        
+
     }
 
 }

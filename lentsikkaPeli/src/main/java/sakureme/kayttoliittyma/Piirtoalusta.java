@@ -13,33 +13,31 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 import sakureme.logiikka.Hahmo;
 
-public class Piirtoalusta extends JPanel implements ActionListener{
-    
+public class Piirtoalusta extends JPanel implements ActionListener {
+
     private List<Hahmo> hahmot;
     private Timer timer;
-    
-    public Piirtoalusta(List<Hahmo> a){
+
+    public Piirtoalusta(List<Hahmo> a) {
         super.setBackground(Color.white);
         hahmot = a;
         timer = new Timer(35, this);
         timer.start();
     }
-    
-    
-    
+
     @Override
-    protected void paintComponent(Graphics g){
+    protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        for(Hahmo i : hahmot){
+        for (Hahmo i : hahmot) {
             i.piirraPalat(g);
         }
-        
+
     }
-    
+
     @Override
-    public void actionPerformed(ActionEvent e){
-        if (e.getSource() == timer){
-            for (Hahmo i : hahmot){
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == timer) {
+            for (Hahmo i : hahmot) {
                 i.putoa();
             }
         }

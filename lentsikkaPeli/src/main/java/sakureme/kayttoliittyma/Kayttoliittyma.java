@@ -1,6 +1,5 @@
 package sakureme.kayttoliittyma;
 
-
 import java.awt.Dimension;
 import java.awt.Container;
 import java.util.*;
@@ -20,35 +19,35 @@ public class Kayttoliittyma implements Runnable {
     private int korkeus;
     private List<Hahmo> hahmot;
     private Hahmo hahmo;
-    
+
     //kustomoitava koko ikkunalle konstruktorissa
-    public Kayttoliittyma(int w, int h) {   
+    public Kayttoliittyma(int w, int h) {
         leveys = w;
         korkeus = h;
     }
-    
-    public void setPelattavaHahmo(Hahmo i){
+
+    public void setPelattavaHahmo(Hahmo i) {
         hahmo = i;
     }
-    
-     //oletusarvoinen koko ikkunalle konstruktorissa
-    public Kayttoliittyma(){       
+
+    //oletusarvoinen koko ikkunalle konstruktorissa
+    public Kayttoliittyma() {
         leveys = 640;
         korkeus = 480;
     }
-    
-    public void lisaaHahmot(List<Hahmo> i){
+
+    public void lisaaHahmot(List<Hahmo> i) {
         hahmot = i;
     }
-    
-    public JFrame getFrame(){
+
+    public JFrame getFrame() {
         return frame;
     }
 
     private void luoKomponentit(Container c) {
         alusta = new Piirtoalusta(hahmot);
         c.add(alusta);
-        
+
         frame.addKeyListener(new Kuuntelija(hahmo, alusta));
     }
 
@@ -60,7 +59,7 @@ public class Kayttoliittyma implements Runnable {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         luoKomponentit(frame.getContentPane());
-        
+
         frame.pack();
         frame.setVisible(true);
     }

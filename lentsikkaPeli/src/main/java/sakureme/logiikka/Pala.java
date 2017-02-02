@@ -36,17 +36,16 @@ public class Pala {
     public int getKorkeus() {
         return korkeus;
     }
-    
+
     ////kahden palasen osumisen logiikka////
-    
-    public boolean osuuko(Pala i){
-        
-        if (x + leveys >= i.getX() && x <= i.getX() + i.getLeveys()){
-            if (y + korkeus >= i.getY() && y <= i.getY() + i.getKorkeus()){
+    public boolean osuuko(Pala i) {
+
+        if (x + leveys >= i.getX() && x <= i.getX() + i.getLeveys()) {
+            if (y + korkeus >= i.getY() && y <= i.getY() + i.getKorkeus()) {
                 return true;
             }
         }
-        
+
         return false;
     }
 
