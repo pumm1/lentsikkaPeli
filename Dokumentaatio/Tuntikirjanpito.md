@@ -13,3 +13,4 @@ P‰iv‰ | Tunnit | Kuvaus
 01.02.2016 |1,0h| Hahmon liikuttelu nyt mahdollista piirtoalustalla
 01.02.2016 |0,5h| hahmon putoavuus toteutettu
 02.02.2016 |1,0h| hahmon putoamisen s‰‰tely, sen testit ja checkstyle
+02.02.2016 |0,5h| READMEn s‰‰t‰mist‰
