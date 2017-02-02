@@ -8,3 +8,4 @@ mahdollisimman pitk‰‰n, samalla esteit‰ v‰istellen.
 [Tuntikirjanpito](Dokumentaatio/Tuntikirjanpito.md)
 [Aiheenm‰‰rittely](Dokumentaatio/Aiheenmaarittely.md)
 [pit-raportti](https://htmlpreview.github.io/?https://github.com/pumm1/lentsikkaPeli/blob/master/Dokumentaatio/pit/201702021227/index.html)
+[checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/pumm1/lentsikkaPeli/blob/master/Dokumentaatio/checkstyle/checkstyle.html)
