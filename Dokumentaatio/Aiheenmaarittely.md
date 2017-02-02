@@ -4,8 +4,8 @@
 Toteutetaan peli, jossa tarkoituksena pitää lentokone ilmassa
 mahdollisimman pitkään ja samalla esteitä väistellen
 
-###Käyttäjät: Pelaaja
+###Käyttäjät: Yksi pelaaja
 
 ###Pelaajan toiminnot:
-Lentokoneen nousu, mahdollisuutena ehkä myöhemmin lisätä
+Lentokoneen nostaminen hetkellisesti korkeammalle, mahdollisuutena ehkä myöhemmin lisätä
 pelaajan mahdollisuus ampua esteitä
