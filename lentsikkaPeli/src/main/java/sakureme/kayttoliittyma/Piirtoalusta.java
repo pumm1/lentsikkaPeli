@@ -17,6 +17,7 @@ public class Piirtoalusta extends JPanel implements ActionListener {
 
     private List<Hahmo> hahmot;
     private Timer timer;
+    private Random rand = new Random();
 
     public Piirtoalusta(List<Hahmo> a) {
         super.setBackground(Color.white);
@@ -39,6 +40,13 @@ public class Piirtoalusta extends JPanel implements ActionListener {
         if (e.getSource() == timer) {
             for (Hahmo i : hahmot) {
                 i.putoa();
+                if (i.getPelattavuus() == false){
+                    i.liikuX(-5);
+                    if (i.getPalat().get(0).getX() <= -100){
+                        int a = rand.nextInt(1000) + 1000;
+                        i.liikuX(a);
+                    }
+                }
             }
         }
         repaint();

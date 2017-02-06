@@ -11,6 +11,7 @@ public class Hahmo {
     private List<Pala> palat;   //käytetään paloja hahmon 'hitboxia' varten
     private int dy; //putoaminen tai hyppääminen
     private boolean putoaa;
+    private boolean pelattava = false;
 
     public Hahmo(int x, int y, int w, int h) {  //konstruktori hahmolle, jolle ei anneta listaa paloista
         Pala eka = new Pala(x, y, w, h);
@@ -26,7 +27,15 @@ public class Hahmo {
         palat = i;
     }
 
-    /////getterit////////
+    /////getterit & setterit////////
+    public void setPelattavuus(boolean i) {
+        pelattava = i;
+    }
+
+    public boolean getPelattavuus() {
+        return pelattava;
+    }
+
     public int getDy() {
         return dy;
     }

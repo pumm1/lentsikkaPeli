@@ -21,19 +21,25 @@ public class Kayttoliittyma implements Runnable {
     private Hahmo hahmo;
 
     //kustomoitava koko ikkunalle konstruktorissa
-    public Kayttoliittyma(int w, int h) {
+    public Kayttoliittyma(int w, int h, Piirtoalusta a) {
         leveys = w;
         korkeus = h;
+        alusta = a;
     }
 
     public void setPelattavaHahmo(Hahmo i) {
         hahmo = i;
+        hahmo.setPelattavuus(true);
     }
 
     //oletusarvoinen koko ikkunalle konstruktorissa
     public Kayttoliittyma() {
         leveys = 640;
         korkeus = 480;
+    }
+
+    public void setAlusta(Piirtoalusta i) {
+        alusta = i;
     }
 
     public void lisaaHahmot(List<Hahmo> i) {
