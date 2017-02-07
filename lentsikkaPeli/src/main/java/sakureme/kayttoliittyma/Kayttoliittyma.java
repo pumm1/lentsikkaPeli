@@ -52,6 +52,7 @@ public class Kayttoliittyma implements Runnable {
 
     private void luoKomponentit(Container c) {
         alusta = new Piirtoalusta(hahmot);
+        alusta.setHahmo(hahmo);
         c.add(alusta);
 
         frame.addKeyListener(new Kuuntelija(hahmo, alusta));

@@ -7,11 +7,12 @@ Päivä | Tunnit | Kuvaus
 25.01.2017 |1,5h| Testien tekemistä ja logiikan lisäämistä
 26.01.2017 |1,0h| Luokkakaavion tekemistä ja PIT-juttujen korjailua (ei toimi)
 26.01.2017 |1,0h| PIT-raportti ja checkstyle-raportti
-29.01.2016 |0,5h| Käyttöliittymän ja piirtoalustan valmistelua
-01.02.2016 |0,5h| Testien päivittelyä jatkoa varten
-01.02.2016 |0,5h| Testien viimeistelyä, käyttöliittymän valmistelua ja PIT
-01.02.2016 |1,0h| Hahmon liikuttelu nyt mahdollista piirtoalustalla
-01.02.2016 |0,5h| hahmon putoavuus toteutettu
-02.02.2016 |1,0h| hahmon putoamisen säätely, sen testit ja checkstyle
-02.02.2016 |0,5h| READMEn säätämistä
-06.02.2016 |1,0h| Peli-luokan luominen ja pientä säätelyä
+29.01.2017 |0,5h| Käyttöliittymän ja piirtoalustan valmistelua
+01.02.2017 |0,5h| Testien päivittelyä jatkoa varten
+01.02.2017 |0,5h| Testien viimeistelyä, käyttöliittymän valmistelua ja PIT
+01.02.2017 |1,0h| Hahmon liikuttelu nyt mahdollista piirtoalustalla
+01.02.2017 |0,5h| hahmon putoavuus toteutettu
+02.02.2017 |1,0h| hahmon putoamisen säätely, sen testit ja checkstyle
+02.02.2017 |0,5h| READMEn säätämistä
+06.02.2017 |1,0h| Peli-luokan luominen ja pientä säätelyä
+07.02.2017 |0,5h| pelin pysähtyminen törmätessä esteeseen ja säätelyä
