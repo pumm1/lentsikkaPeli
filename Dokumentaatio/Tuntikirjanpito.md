@@ -16,3 +16,4 @@ Päivä | Tunnit | Kuvaus
 02.02.2017 |0,5h| READMEn säätämistä
 06.02.2017 |1,0h| Peli-luokan luominen ja pientä säätelyä
 07.02.2017 |0,5h| pelin pysähtyminen törmätessä esteeseen ja säätelyä
+07.02.2017 |1,0h| hahmojen liikkumisen säätelyä ja hienosäätöä

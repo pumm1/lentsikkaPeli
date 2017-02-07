@@ -10,8 +10,10 @@ public class Hahmo {
      */
     private List<Pala> palat;   //käytetään paloja hahmon 'hitboxia' varten
     private int dy; //putoaminen tai hyppääminen
+    private int dx; //liikkuminen
     private boolean putoaa;
     private boolean pelattava = false;
+    private Random rand = new Random();
 
     public Hahmo(int x, int y, int w, int h) {  //konstruktori hahmolle, jolle ei anneta listaa paloista
         Pala eka = new Pala(x, y, w, h);
@@ -19,11 +21,12 @@ public class Hahmo {
         palat.add(eka);
         dy = 0;
         putoaa = false;
+        dx = -5;
     }
 
     //konstruktori hahmolle, jolle annetaan heti kaikki palat
     public Hahmo(List<Pala> i) {
-
+        dx = -5;
         palat = i;
     }
 
@@ -70,6 +73,7 @@ public class Hahmo {
 
     public void setPutoavuus(boolean i) {
         putoaa = i;
+        dx = 0;
     }
 
     public void putoa() {
@@ -114,6 +118,36 @@ public class Hahmo {
         for (Pala i : palat) {
             i.liikuY(a);
         }
+    }
+
+    //yhdistetään putoaminen ja liikkuminen
+    public void liiku() {
+        if (putoaa) {
+            for (Pala i : palat) {
+                i.liikuY(dy);
+            }
+            if (dy < 5) {
+                dy++;
+            }
+        }
+        this.liikuX(dx);
+    }
+
+    //ei tarvitse testata, koska hyödynnetään vain liikuX ja liikuY
+    //käytetään, kun hahmo  menee kentän reunojen yli ja se "respwnaa"
+    public void siirraUuteenPaikkaan() {
+        dx = rand.nextInt(5) + 4;
+        dx = dx * (-1);
+        int y = rand.nextInt(100);
+        if (palat.get(0).getY() >= 300) {   //ei siirretä alas, jos menee kentästä ulos
+            int kerroin = rand.nextInt(2);  //määrää sen, liikutetaanko hahmoa ylös vai alas
+            if (kerroin == 0) {
+                y = y * (-1);
+            }
+        }
+        this.liikuY(y);
+        int dx = rand.nextInt(1000) + 800;  //liikutetaan x-suunnassa uudelleen esteeksi
+        this.liikuX(dx);
     }
 
     //piirretään hahmon palat

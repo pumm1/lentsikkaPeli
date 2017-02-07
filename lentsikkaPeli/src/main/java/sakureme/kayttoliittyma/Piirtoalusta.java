@@ -46,10 +46,9 @@ public class Piirtoalusta extends JPanel implements ActionListener {
             for (Hahmo i : hahmot) {
                 i.putoa();
                 if (i.getPelattavuus() == false){
-                    i.liikuX(-5);
+                    i.liiku();
                     if (i.getPalat().get(0).getX() <= -100){
-                        int a = rand.nextInt(1000) + 1000;
-                        i.liikuX(a);
+                        i.siirraUuteenPaikkaan();
                     }
                 }
                 if(!i.equals(hahmo)){

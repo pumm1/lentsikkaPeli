@@ -45,6 +45,10 @@ public class Kayttoliittyma implements Runnable {
     public void lisaaHahmot(List<Hahmo> i) {
         hahmot = i;
     }
+    
+    public void lisaaHahmoListaan(Hahmo i){
+        hahmot.add(i);
+    }
 
     public JFrame getFrame() {
         return frame;
