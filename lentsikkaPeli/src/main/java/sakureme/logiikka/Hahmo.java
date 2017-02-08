@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Hahmo {
 
-    /*
+    /**
     Tässä luodaan pelin hahmojen logiikka
      */
     private List<Pala> palat;   //käytetään paloja hahmon 'hitboxia' varten
@@ -133,12 +133,13 @@ public class Hahmo {
         this.liikuX(dx);
     }
 
-    //ei tarvitse testata, koska hyödynnetään vain liikuX ja liikuY
-    //käytetään, kun hahmo  menee kentän reunojen yli ja se "respwnaa"
+    /**ei tarvitse testata, koska hyödynnetään vain liikuX ja liikuY ja arvotaan uusi paikka
+    tätä mahdollisesti muokataan, koska tämä ei huomioi esteen "tyyppiä" (puu/tolppa, lintu...)
+    käytetään, kun hahmo  menee kentän reunojen yli ja se "respwnaa"*/
     public void siirraUuteenPaikkaan() {
         dx = rand.nextInt(5) + 4;
         dx = dx * (-1);
-        int y = rand.nextInt(100);
+        int y = rand.nextInt(100) + 100;
         if (palat.get(0).getY() >= 300) {   //ei siirretä alas, jos menee kentästä ulos
             int kerroin = rand.nextInt(2);  //määrää sen, liikutetaanko hahmoa ylös vai alas
             if (kerroin == 0) {
@@ -146,8 +147,8 @@ public class Hahmo {
             }
         }
         this.liikuY(y);
-        int dx = rand.nextInt(1000) + 800;  //liikutetaan x-suunnassa uudelleen esteeksi
-        this.liikuX(dx);
+        int tempX = rand.nextInt(1000) + 800;  //liikutetaan x-suunnassa uudelleen esteeksi
+        this.liikuX(tempX);
     }
 
     //piirretään hahmon palat

@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import sakureme.logiikka.Hahmo;
 
-/*
+/**
 Kuuntelija, saadaan pelattaville hahmoille inputtia
  */
 public class Kuuntelija implements KeyListener {

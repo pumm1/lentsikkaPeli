@@ -1,6 +1,6 @@
 package sakureme.kayttoliittyma;
 
-/*
+/**
 Piirtoalustan toteutus
  */
 import java.util.*;

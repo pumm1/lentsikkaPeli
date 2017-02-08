@@ -8,7 +8,7 @@ import javax.swing.WindowConstants;
 import sakureme.kuuntelija.Kuuntelija;
 import sakureme.logiikka.Hahmo;
 
-/*
+/**
 Käyttöliittymän toteutus
  */
 public class Kayttoliittyma implements Runnable {

@@ -2,7 +2,7 @@ package sakureme.logiikka;
 
 import java.awt.Graphics;
 
-/*
+/**
 Tässä luodaan pelin palojen (ja ns. 'hitboxien') logiikka
  */
 public class Pala {

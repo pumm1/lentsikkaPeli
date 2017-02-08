@@ -12,7 +12,7 @@ import javax.swing.SwingUtilities;
 import sakureme.logiikka.Hahmo;
 import sakureme.logiikka.Pala;
 
-/*
+/**
 Peli-luokalla tehdään Main-luokasta siistimpi, alustamalla tarvittavat oliot täällä käynnistystä varten
  */
 public class Peli {
