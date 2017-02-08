@@ -18,3 +18,4 @@ Päivä | Tunnit | Kuvaus
 07.02.2017 |0,5h| pelin pysähtyminen törmätessä esteeseen ja säätelyä
 07.02.2017 |1,0h| hahmojen liikkumisen säätelyä ja hienosäätöä
 08.02.2017 |0,5h| Javadoc pähkäilyä ja pieniä muutoksia
+08.02.2017 |1,0h| Puu-luokan luominen

@@ -1,7 +1,7 @@
 package sakureme.kayttoliittyma;
 
 /**
-Piirtoalustan toteutus
+ * Piirtoalustan toteutus
  */
 import java.util.*;
 import java.awt.Color;
@@ -35,8 +35,8 @@ public class Piirtoalusta extends JPanel implements ActionListener {
         }
 
     }
-    
-    public void setHahmo(Hahmo i){
+
+    public void setHahmo(Hahmo i) {
         hahmo = i;
     }
 
@@ -45,14 +45,14 @@ public class Piirtoalusta extends JPanel implements ActionListener {
         if (e.getSource() == timer) {
             for (Hahmo i : hahmot) {
                 i.putoa();
-                if (i.getPelattavuus() == false){
+                if (i.getPelattavuus() == false) {
                     i.liiku();
-                    if (i.getPalat().get(0).getX() <= -100){
+                    if (i.getPalat().get(0).getX() <= -300) {
                         i.siirraUuteenPaikkaan();
                     }
                 }
-                if(!i.equals(hahmo)){
-                    if(hahmo.osuu(i)){
+                if (!i.equals(hahmo)) {
+                    if (hahmo.osuu(i)) {
                         timer.stop();
                     }
                 }

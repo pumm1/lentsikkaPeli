@@ -10,14 +10,14 @@ import java.util.*;
 public class Hahmo {
 
     /**
-    Tässä luodaan pelin hahmojen logiikka
+     * Tässä luodaan pelin hahmojen logiikka
      */
-    private List<Pala> palat;   //käytetään paloja hahmon 'hitboxia' varten
-    private int dy; //putoaminen tai hyppääminen
-    private int dx; //liikkuminen
-    private boolean putoaa;
+    protected List<Pala> palat;   //käytetään paloja hahmon 'hitboxia' varten
+    protected int dy; //putoaminen tai hyppääminen
+    protected int dx; //liikkuminen
+    protected boolean putoaa;
     private boolean pelattava = false;
-    private Random rand = new Random();
+    protected Random rand = new Random();
 
     /**
      *
@@ -36,7 +36,6 @@ public class Hahmo {
     }
 
     //konstruktori hahmolle, jolle annetaan heti kaikki palat
-
     /**
      *
      * @param i
@@ -47,7 +46,6 @@ public class Hahmo {
     }
 
     /////getterit & setterit////////
-
     /**
      *
      * @param i
@@ -90,7 +88,6 @@ public class Hahmo {
     }
 
     ///palojen lisäys//
-
     /**
      *
      * @param i
@@ -113,7 +110,6 @@ public class Hahmo {
 
     ///////hahmon logiikka////////
     //koordinaatisto "väärinpäin", joten hypyssä suunta negatiivinen
-
     /**
      *
      */
@@ -146,7 +142,6 @@ public class Hahmo {
     }
 
     //tarkistetaan, osuuko Hahmo toiseen hahmoon
-
     /**
      *
      * @param i
@@ -168,7 +163,6 @@ public class Hahmo {
     }
 
     //hahmon palojen liikuttelu x-suunnassa
-
     /**
      *
      * @param a
@@ -181,7 +175,6 @@ public class Hahmo {
     }
 
     //hahmon palojen liikuttelu y-suunnassa
-
     /**
      *
      * @param a
@@ -194,7 +187,6 @@ public class Hahmo {
     }
 
     //yhdistetään putoaminen ja liikkuminen
-
     /**
      *
      */
@@ -210,10 +202,13 @@ public class Hahmo {
         this.liikuX(dx);
     }
 
-    /**ei tarvitse testata, koska hyödynnetään vain liikuX ja liikuY ja arvotaan uusi paikka
-    tätä mahdollisesti muokataan, koska tämä ei huomioi esteen "tyyppiä" (puu/tolppa, lintu...)
-    käytetään, kun hahmo  menee kentän reunojen yli ja se "respwnaa"
-    tulevaisuudessa pyritään tekemään jokaiselle hahmotyypille oma luokka, joka perii Hahmo-luokan*/
+    /**
+     * ei tarvitse testata, koska hyödynnetään vain liikuX ja liikuY ja arvotaan
+     * uusi paikka tätä mahdollisesti muokataan, koska tämä ei huomioi esteen
+     * "tyyppiä" (puu/tolppa, lintu...) käytetään, kun hahmo menee kentän
+     * reunojen yli ja se "respwnaa" tulevaisuudessa pyritään tekemään
+     * jokaiselle hahmotyypille oma luokka, joka perii Hahmo-luokan
+     */
     public void siirraUuteenPaikkaan() {
         dx = rand.nextInt(5) + 4;
         dx = dx * (-1);
@@ -231,7 +226,6 @@ public class Hahmo {
 
     //piirretään hahmon palat
     //myöhemmässä vaiheessa tämä pyritään korvaamaan hahmon .png-kuvan piirtämisellä
-
     /**
      *
      * @param g
