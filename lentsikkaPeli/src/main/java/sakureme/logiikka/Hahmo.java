@@ -3,6 +3,10 @@ package sakureme.logiikka;
 import java.awt.Graphics;
 import java.util.*;
 
+/**
+ *
+ * @author Sagu
+ */
 public class Hahmo {
 
     /**
@@ -15,6 +19,13 @@ public class Hahmo {
     private boolean pelattava = false;
     private Random rand = new Random();
 
+    /**
+     *
+     * @param x
+     * @param y
+     * @param w
+     * @param h
+     */
     public Hahmo(int x, int y, int w, int h) {  //konstruktori hahmolle, jolle ei anneta listaa paloista
         Pala eka = new Pala(x, y, w, h);
         palat = new ArrayList<>();
@@ -25,39 +36,74 @@ public class Hahmo {
     }
 
     //konstruktori hahmolle, jolle annetaan heti kaikki palat
+
+    /**
+     *
+     * @param i
+     */
     public Hahmo(List<Pala> i) {
         dx = -5;
         palat = i;
     }
 
     /////getterit & setterit////////
+
+    /**
+     *
+     * @param i
+     */
     public void setPelattavuus(boolean i) {
         pelattava = i;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean getPelattavuus() {
         return pelattava;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getDy() {
         return dy;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean getPutoaa() {
         return putoaa;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Pala> getPalat() {
 
         return palat;
     }
 
     ///palojen lisäys//
+
+    /**
+     *
+     * @param i
+     */
     public void lisaaPala(Pala i) {
 
         palat.add(i);
     }
 
+    /**
+     *
+     * @param p
+     */
     public void lisaaPaloja(List<Pala> p) {
 
         for (Pala i : p) {
@@ -67,15 +113,26 @@ public class Hahmo {
 
     ///////hahmon logiikka////////
     //koordinaatisto "väärinpäin", joten hypyssä suunta negatiivinen
+
+    /**
+     *
+     */
     public void hyppaa() {
         dy = -7;
     }
 
+    /**
+     *
+     * @param i
+     */
     public void setPutoavuus(boolean i) {
         putoaa = i;
         dx = 0;
     }
 
+    /**
+     *
+     */
     public void putoa() {
 
         if (putoaa) {   //turhaan toteuttaa ylimääräistä työtä, jos hahmoa ei ole määritelty putoavaksi
@@ -89,6 +146,12 @@ public class Hahmo {
     }
 
     //tarkistetaan, osuuko Hahmo toiseen hahmoon
+
+    /**
+     *
+     * @param i
+     * @return
+     */
     public boolean osuu(Hahmo i) {
 
         List<Pala> kohde = i.getPalat();
@@ -105,6 +168,11 @@ public class Hahmo {
     }
 
     //hahmon palojen liikuttelu x-suunnassa
+
+    /**
+     *
+     * @param a
+     */
     public void liikuX(int a) {
 
         for (Pala i : palat) {
@@ -113,6 +181,11 @@ public class Hahmo {
     }
 
     //hahmon palojen liikuttelu y-suunnassa
+
+    /**
+     *
+     * @param a
+     */
     public void liikuY(int a) {
 
         for (Pala i : palat) {
@@ -121,6 +194,10 @@ public class Hahmo {
     }
 
     //yhdistetään putoaminen ja liikkuminen
+
+    /**
+     *
+     */
     public void liiku() {
         if (putoaa) {
             for (Pala i : palat) {
@@ -135,7 +212,8 @@ public class Hahmo {
 
     /**ei tarvitse testata, koska hyödynnetään vain liikuX ja liikuY ja arvotaan uusi paikka
     tätä mahdollisesti muokataan, koska tämä ei huomioi esteen "tyyppiä" (puu/tolppa, lintu...)
-    käytetään, kun hahmo  menee kentän reunojen yli ja se "respwnaa"*/
+    käytetään, kun hahmo  menee kentän reunojen yli ja se "respwnaa"
+    tulevaisuudessa pyritään tekemään jokaiselle hahmotyypille oma luokka, joka perii Hahmo-luokan*/
     public void siirraUuteenPaikkaan() {
         dx = rand.nextInt(5) + 4;
         dx = dx * (-1);
@@ -153,6 +231,11 @@ public class Hahmo {
 
     //piirretään hahmon palat
     //myöhemmässä vaiheessa tämä pyritään korvaamaan hahmon .png-kuvan piirtämisellä
+
+    /**
+     *
+     * @param g
+     */
     public void piirraPalat(Graphics g) {
 
         for (Pala i : palat) {

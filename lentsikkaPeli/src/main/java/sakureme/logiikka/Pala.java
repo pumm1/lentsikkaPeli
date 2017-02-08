@@ -13,6 +13,13 @@ public class Pala {
     private int korkeus;
     private int dy = 0;     //putoamista varten, kaikki palat eivät välttämättä liiku
 
+    /**
+     *
+     * @param ax
+     * @param yy
+     * @param w
+     * @param h
+     */
     public Pala(int ax, int yy, int w, int h) {
         x = ax;
         y = yy;
@@ -21,23 +28,46 @@ public class Pala {
     }
 
     ////////////getterit///////////////
+
+    /**
+     *
+     * @return
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getY() {
         return y;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getLeveys() {
         return leveys;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getKorkeus() {
         return korkeus;
     }
 
     ////kahden palasen osumisen logiikka////
+
+    /**
+     *
+     * @param i
+     * @return
+     */
     public boolean osuuko(Pala i) {
 
         if (x + leveys >= i.getX() && x <= i.getX() + i.getLeveys()) {
@@ -50,10 +80,19 @@ public class Pala {
     }
 
     /////palan liikukuminen////////////
+
+    /**
+     *
+     * @param i
+     */
     public void liikuX(int i) {
         x += i;
     }
 
+    /**
+     *
+     * @param j
+     */
     public void liikuY(int j) {
         y += j;
     }
@@ -62,6 +101,11 @@ public class Pala {
     //alustavasti hyödynnetään Javan Graphics-oliota pelin testaamiseen
     //pyritään käyttämään lopussa .png-kuvia
     //pala koostuu neliöstä, jonka vasen ylänurkka koordinaateissa (x,y) ja koko leveys*korkeus (voidaan tarvittaessa muuttaa)
+
+    /**
+     *
+     * @param g
+     */
     public void piirra(Graphics g) {
         g.fillRect(x, y, leveys, korkeus);
 
