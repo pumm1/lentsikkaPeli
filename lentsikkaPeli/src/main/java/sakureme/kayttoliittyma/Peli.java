@@ -34,7 +34,7 @@ public class Peli {
         Puu puu1 = new Puu(400, 250, 70, 350);   //olevinaan puu/tolppa
         Puu puu2 = new Puu(750, 200, 70, 350);
         Puu puu3 = new Puu(1100, 230, 70, 350);
-        
+
         List<Pala> palat = new ArrayList<>();
         List<Hahmo> hahmot = new ArrayList<>();
 

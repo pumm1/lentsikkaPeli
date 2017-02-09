@@ -9,7 +9,7 @@ import sakureme.kuuntelija.Kuuntelija;
 import sakureme.logiikka.Hahmo;
 
 /**
-Käyttöliittymän toteutus
+ * Käyttöliittymän toteutus
  */
 public class Kayttoliittyma implements Runnable {
 
@@ -45,8 +45,8 @@ public class Kayttoliittyma implements Runnable {
     public void lisaaHahmot(List<Hahmo> i) {
         hahmot = i;
     }
-    
-    public void lisaaHahmoListaan(Hahmo i){
+
+    public void lisaaHahmoListaan(Hahmo i) {
         hahmot.add(i);
     }
 

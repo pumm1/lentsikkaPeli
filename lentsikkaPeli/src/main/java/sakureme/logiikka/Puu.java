@@ -5,9 +5,8 @@
  */
 package sakureme.logiikka;
 
-/**
- *
- * @author Sagu
+/*
+    Tälle luokalle ei tehdä alustavasti testejä, koska on käytännössä Hahmo-luokka
  */
 public class Puu extends Hahmo {
 

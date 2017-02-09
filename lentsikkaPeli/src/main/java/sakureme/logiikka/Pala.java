@@ -3,7 +3,7 @@ package sakureme.logiikka;
 import java.awt.Graphics;
 
 /**
-Tässä luodaan pelin palojen (ja ns. 'hitboxien') logiikka
+ * Tässä luodaan pelin palojen (ja ns. 'hitboxien') logiikka
  */
 public class Pala {
 
@@ -28,7 +28,6 @@ public class Pala {
     }
 
     ////////////getterit///////////////
-
     /**
      *
      * @return
@@ -62,7 +61,6 @@ public class Pala {
     }
 
     ////kahden palasen osumisen logiikka////
-
     /**
      *
      * @param i
@@ -80,7 +78,6 @@ public class Pala {
     }
 
     /////palan liikukuminen////////////
-
     /**
      *
      * @param i
@@ -101,7 +98,6 @@ public class Pala {
     //alustavasti hyödynnetään Javan Graphics-oliota pelin testaamiseen
     //pyritään käyttämään lopussa .png-kuvia
     //pala koostuu neliöstä, jonka vasen ylänurkka koordinaateissa (x,y) ja koko leveys*korkeus (voidaan tarvittaessa muuttaa)
-
     /**
      *
      * @param g

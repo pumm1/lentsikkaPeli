@@ -15,7 +15,7 @@ import sakureme.kayttoliittyma.Peli;
 public class Main {
 
     /**
-    Ohjelman käynnistys täältä
+     * Ohjelman käynnistys täältä
      */
     public static void main(String[] args) {
 
