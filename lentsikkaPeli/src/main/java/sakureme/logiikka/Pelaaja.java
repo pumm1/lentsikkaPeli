@@ -21,10 +21,8 @@ public class Pelaaja extends Hahmo {
     //ei mahdollisteta sitä, että pelaaja huijaa pysymällä palikoiden ulottumattomissa!
     public boolean peliAlueenSisalla() {
         if (this.getPalat().get(0).getY() < -10) {
-            
             return false;
         } else if (this.getPalat().get(0).getY() > 420) {
-            System.out.println("död");
             return false;
         }
         return true;
