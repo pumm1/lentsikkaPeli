@@ -11,6 +11,7 @@ import java.util.Random;
 import javax.swing.SwingUtilities;
 import sakureme.logiikka.Hahmo;
 import sakureme.logiikka.Pala;
+import sakureme.logiikka.Pelaaja;
 import sakureme.logiikka.Puu;
 
 /**
@@ -41,9 +42,12 @@ public class Peli {
         x = rand.nextInt(500) + 200;
         y = rand.nextInt(250) + 100;
 
-        Hahmo pelaaja = new Hahmo(50, 50, 20, 20);
-        pelaaja.lisaaPala(new Pala(50, 70, 100, 20));
-        pelaaja.lisaaPala(new Pala(120, 60, 20, 20));
+        //luodaan pelattava hahmo
+        List<Pala> hahmoPalat = new ArrayList<>();
+        hahmoPalat.add(new Pala(50, 50, 20, 20));
+        hahmoPalat.add(new Pala(50, 70, 100, 20));
+        hahmoPalat.add(new Pala(120, 60, 20, 20));
+        Pelaaja pelaaja = new Pelaaja(hahmoPalat);
 
         pelaaja.setPutoavuus(true);
 

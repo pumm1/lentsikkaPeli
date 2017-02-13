@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import sakureme.logiikka.Hahmo;
+import sakureme.logiikka.Pelaaja;
 
 /**
  * Kuuntelija, saadaan pelattaville hahmoille inputtia
@@ -19,7 +20,7 @@ public class Kuuntelija implements KeyListener {
     private Component component;
     private Hahmo hahmo;
 
-    public Kuuntelija(Hahmo i, Component c) {
+    public Kuuntelija(Pelaaja i, Component c) {
         hahmo = i;
         component = c;
     }
@@ -30,11 +31,7 @@ public class Kuuntelija implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            hahmo.liikuX(-3);
-        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            hahmo.liikuX(3);
-        } else if (e.getKeyCode() == KeyEvent.VK_UP) {
+        if (e.getKeyCode() == KeyEvent.VK_UP) {
             hahmo.hyppaa();
         }
 

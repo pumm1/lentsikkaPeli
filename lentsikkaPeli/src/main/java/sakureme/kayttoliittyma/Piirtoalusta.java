@@ -12,13 +12,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 import sakureme.logiikka.Hahmo;
+import sakureme.logiikka.Pelaaja;
 
 public class Piirtoalusta extends JPanel implements ActionListener {
 
     private List<Hahmo> hahmot;
     private Timer timer;
     private Random rand = new Random();
-    private Hahmo hahmo;
+    private Pelaaja pelaaja;
 
     public Piirtoalusta(List<Hahmo> a) {
         super.setBackground(Color.white);
@@ -36,12 +37,15 @@ public class Piirtoalusta extends JPanel implements ActionListener {
 
     }
 
-    public void setHahmo(Hahmo i) {
-        hahmo = i;
+    public void setHahmo(Pelaaja i) {
+        pelaaja = i;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (!pelaaja.peliAlueenSisalla()) { //hävisit pelin
+            timer.stop();
+        }
         if (e.getSource() == timer) {
             for (Hahmo i : hahmot) {
                 i.putoa();
@@ -51,8 +55,8 @@ public class Piirtoalusta extends JPanel implements ActionListener {
                         i.siirraUuteenPaikkaan();
                     }
                 }
-                if (!i.equals(hahmo)) {
-                    if (hahmo.osuu(i)) {
+                if (!i.equals(pelaaja)) {
+                    if (pelaaja.osuu(i)) {  //hävisit pelin
                         timer.stop();
                     }
                 }

@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 import sakureme.kuuntelija.Kuuntelija;
 import sakureme.logiikka.Hahmo;
+import sakureme.logiikka.Pelaaja;
 
 /**
  * Käyttöliittymän toteutus
@@ -18,7 +19,7 @@ public class Kayttoliittyma implements Runnable {
     private int leveys;
     private int korkeus;
     private List<Hahmo> hahmot;
-    private Hahmo hahmo;
+    private Pelaaja hahmo;
 
     //kustomoitava koko ikkunalle konstruktorissa
     public Kayttoliittyma(int w, int h, Piirtoalusta a) {
@@ -27,7 +28,7 @@ public class Kayttoliittyma implements Runnable {
         alusta = a;
     }
 
-    public void setPelattavaHahmo(Hahmo i) {
+    public void setPelattavaHahmo(Pelaaja i) {
         hahmo = i;
         hahmo.setPelattavuus(true);
     }

@@ -20,3 +20,4 @@ Päivä | Tunnit | Kuvaus
 08.02.2017 |0,5h| Javadoc pähkäilyä ja pieniä muutoksia
 08.02.2017 |1,0h| Puu-luokan luominen
 09.02.2017 |0,5h| dokumentaatiota ja hifistelyä
+13.02.2017 |1,0h| Pelaaja-luokka ja pelin päättyminen myös pelialueen rajojen ylittämisestä
