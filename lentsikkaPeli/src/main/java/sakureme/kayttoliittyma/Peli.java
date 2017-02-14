@@ -39,7 +39,7 @@ public class Peli {
         puu2.lataaKuva();
         puu3.lataaKuva();
         
-        List<Pala> palat = new ArrayList<>();
+//        List<Pala> palat = new ArrayList<>();
         List<Hahmo> hahmot = new ArrayList<>();
 
         x = rand.nextInt(500) + 200;
