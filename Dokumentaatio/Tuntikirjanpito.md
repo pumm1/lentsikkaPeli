@@ -22,3 +22,4 @@ Päivä | Tunnit | Kuvaus
 09.02.2017 |0,5h| dokumentaatiota ja hifistelyä
 13.02.2017 |1,0h| Pelaaja-luokka ja pelin päättyminen myös pelialueen rajojen ylittämisestä
 13.02.2017 |0,5h| Pelaaja- ja Puu-luokkien testit
+14.02.2017 |1,0h| Pelaaja- ja Puu-olioille upeat .png-grafiikat ja pari testiä

@@ -306,4 +306,20 @@ public class HahmoTest {
 
         assertEquals(5, dy);
     }
+
+    //testi18
+    @Test
+    public void hahmonPelattavuusTunnistetaan() {
+        boolean pelattavuus = hahmo1.getPelattavuus();
+
+        //oletuksena ei toimi
+        assertEquals(false, pelattavuus);
+
+        //asetetaan pelattavaksi
+        hahmo1.setPelattavuus(true);
+        pelattavuus = hahmo1.getPelattavuus();
+        
+        assertEquals(true, pelattavuus);
+    }
+
 }
