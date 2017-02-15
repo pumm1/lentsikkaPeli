@@ -7,5 +7,5 @@ mahdollisimman pitkään ja samalla esteitä väistellen
 ###Käyttäjät: Yksi pelaaja
 
 ###Pelaajan toiminnot:
-Lentokoneen nostaminen hetkellisesti korkeammalle, mahdollisuutena ehkä myöhemmin lisätä
-pelaajan mahdollisuus ampua esteitä
+Lentokoneen nostaminen hetkellisesti korkeammalle nappia painamalla,
+jotta pelaaja voi väistää esteitä

@@ -7,6 +7,7 @@ package sakureme.logiikka;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
@@ -36,8 +37,16 @@ public class Pelaaja extends Hahmo {
     }
 
     public void lataaKuva() {
-        kuva = new ImageIcon("D:\\Projekstit\\lentsikkaPeli\\lentsikkaPeli\\src\\lentsikka.png").getImage();
-        ladattu = true;
+        //"D:\\Projekstit\\lentsikkaPeli\\lentsikkaPeli\\src\\lentsikka.png" <- talteen varalle
+        //seuraavan avulla kaikilla koodin omaavilla pitäisi kuvien näkyä
+        File lentsikkaTiedosto = new File("src/lentsikka.png"); 
+//        System.out.println(file.getAbsolutePath());
+        kuva = new ImageIcon(lentsikkaTiedosto.getAbsolutePath()).getImage();
+        
+        //varmennetaan vielä, että jos jokin menee pieleen, niin käytetään palikkagrafiikkaa
+        if (kuva != null) {
+            ladattu = true;
+        }
     }
 
     @Override

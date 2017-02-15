@@ -24,3 +24,4 @@ Päivä | Tunnit | Kuvaus
 13.02.2017 |0,5h| Pelaaja- ja Puu-luokkien testit
 14.02.2017 |1,0h| Pelaaja- ja Puu-olioille upeat .png-grafiikat ja pari testiä
 14.02.2017 |0,5h| Lintu-luokan alustamista
+15.02.2017 |0,5h| Kuvien lataamisen pitäisi onnistua kaikilla dynaamisesti

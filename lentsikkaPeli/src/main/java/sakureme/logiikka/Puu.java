@@ -7,6 +7,7 @@ package sakureme.logiikka;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.io.File;
 import javax.swing.ImageIcon;
 
 /*
@@ -31,8 +32,14 @@ public class Puu extends Hahmo {
     }
 
     public void lataaKuva() {
-        kuva = new ImageIcon("D:\\Projekstit\\lentsikkaPeli\\lentsikkaPeli\\src\\puu.png").getImage();
-        ladattu = true;
+        //saadaan puun kvua hienosti käyttöön riippumatta siitä, minne kansiot sijoitettu koneella
+        File puuTiedosto = new File("src/puu.png");
+        kuva = new ImageIcon(puuTiedosto.getAbsolutePath()).getImage();
+        
+        //varmennetaan vielä, että jos jokin menee pieleen, niin käytetään palikkagrafiikkaa
+        if (kuva != null) {
+            ladattu = true;
+        }
     }
 
     //siirretään puu uudelle paikalleen, kun se on hävinnyt peliruudulta
