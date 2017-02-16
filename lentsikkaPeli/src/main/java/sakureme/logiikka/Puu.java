@@ -59,7 +59,7 @@ public class Puu extends Hahmo {
             y = y * (-1);
         }
         this.liikuY(y);
-        int tempX = rand.nextInt(900) + 1200;
+        int tempX = rand.nextInt(900) + 1200 + rand.nextInt(400);
         this.liikuX(tempX);
     }
 

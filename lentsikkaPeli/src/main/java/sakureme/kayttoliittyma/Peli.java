@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Random;
 import javax.swing.SwingUtilities;
 import sakureme.logiikka.Hahmo;
+import sakureme.logiikka.Lintu;
 import sakureme.logiikka.Pala;
 import sakureme.logiikka.Pelaaja;
 import sakureme.logiikka.Puu;
@@ -30,14 +31,28 @@ public class Peli {
 
     //luodaan hahmot ja asetetaan ne paikalleen
     public void alustaHahmot() {
-        int x = rand.nextInt(300) + 200;
-        int y;
-        Puu puu1 = new Puu(400, 250, 100, 350);   //olevinaan puu/tolppa
-        Puu puu2 = new Puu(750, 200, 100, 350);
-        Puu puu3 = new Puu(1100, 230, 100, 350);
+        int x = arvoX();
+        int y = arvoPuuY();
+        Puu puu1 = new Puu(x, y, 100, 350);
+        x = arvoX() + arvoX() + arvoX();
+        y = arvoPuuY();
+        Puu puu2 = new Puu(x, y, 100, 350);
+        x = arvoX() + arvoX();
+        y = arvoPuuY();
+        Puu puu3 = new Puu(x, y, 100, 350);
         puu1.lataaKuva();
         puu2.lataaKuva();
         puu3.lataaKuva();
+
+        x = arvoX();
+        y = arvoLintuY();
+        Lintu tirppa = new Lintu(x, y, 60, 60);
+        tirppa.lataaKuva();
+
+        x = arvoX() + arvoX();
+        y = arvoLintuY();
+        Lintu pulu = new Lintu(x, y, 60, 60);
+        pulu.lataaKuva();
 
 //        List<Pala> palat = new ArrayList<>();
         List<Hahmo> hahmot = new ArrayList<>();
@@ -57,11 +72,28 @@ public class Peli {
 
         hahmot.add(puu1);
         hahmot.add(puu2);
-        hahmot.add(pelaaja);
         hahmot.add(puu3);
+        hahmot.add(tirppa);
+        hahmot.add(pulu);
+        hahmot.add(pelaaja);
 
         kayttis.lisaaHahmot(hahmot);
         kayttis.setPelattavaHahmo(pelaaja);
+    }
+
+    public int arvoX() {
+        int x = rand.nextInt(800) + 400;
+        return x;
+    }
+
+    public int arvoPuuY() {
+        int y = rand.nextInt(100) + 250;
+        return y;
+    }
+
+    public int arvoLintuY() {
+        int y = rand.nextInt(100) + 10;
+        return y;
     }
 
     public void aloita() {

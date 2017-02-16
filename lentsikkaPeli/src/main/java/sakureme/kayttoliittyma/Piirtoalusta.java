@@ -30,6 +30,7 @@ public class Piirtoalusta extends JPanel implements ActionListener {
 
     @Override
     protected void paintComponent(Graphics g) {
+
         super.paintComponent(g);
         for (Hahmo i : hahmot) {
             i.piirraPalat(g);
