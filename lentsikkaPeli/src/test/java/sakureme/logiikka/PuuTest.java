@@ -41,7 +41,7 @@ public class PuuTest {
         boolean siirto = false;
 
         //tarkistetaan, ettei puu ole enää samalla paikalla kuin aiemmin
-        if (x >= 1200) {
+        if (x >= 900) {
             if (y != temp) {
                 siirto = true;
             }

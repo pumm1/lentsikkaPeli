@@ -55,7 +55,7 @@ public class Puu extends Hahmo {
         dx = rand.nextInt(10) + 5;
         dx = dx * (-1);
         int y = rand.nextInt(50) + 30;
-        if (palat.get(0).getY() >= 250) {   //estetään puun häviäminen ruudulta
+        if (palat.get(0).getY() >= 280) {   //estetään puun häviäminen ruudulta
             y = y * (-1);
         }
         this.liikuY(y);

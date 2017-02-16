@@ -30,8 +30,11 @@ public class Lintu extends Hahmo {
         dx = rand.nextInt(10) + 6;
         dx = dx * (-1);
         int y = rand.nextInt(10) + 30;
-        if (palat.get(0).getY() >= 50) {   //estetään linnun häviäminen ruudulta
+        if (palat.get(0).getY() >= 200) {   //estetään linnun häviäminen ruudulta
             y = y * (-1);
+        }
+        if (y < 0) {
+            y = 0 + rand.nextInt(15);
         }
         this.liikuY(y);
         int tempX = rand.nextInt(900) + 1200;
