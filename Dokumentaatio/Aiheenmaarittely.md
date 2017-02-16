@@ -8,4 +8,4 @@ mahdollisimman pitk‰‰n ja samalla esteit‰ v‰istellen
 
 ###Pelaajan toiminnot:
 Lentokoneen nostaminen hetkellisesti korkeammalle nappia painamalla,
-jotta pelaaja voi v‰ist‰‰ esteit‰
+jotta pelaaja voi v‰ist‰‰ esteit‰ (kuten esim. puut ja linnut)

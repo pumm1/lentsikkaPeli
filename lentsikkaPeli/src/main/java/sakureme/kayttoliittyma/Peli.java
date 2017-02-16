@@ -62,9 +62,9 @@ public class Peli {
 
         //luodaan pelattava hahmo
         List<Pala> hahmoPalat = new ArrayList<>();
-        hahmoPalat.add(new Pala(50, 50, 20, 20));
-        hahmoPalat.add(new Pala(50, 70, 100, 20));
-        hahmoPalat.add(new Pala(120, 60, 20, 20));
+        hahmoPalat.add(new Pala(50, 50, 15, 25));
+        hahmoPalat.add(new Pala(50, 75, 100, 23));
+        hahmoPalat.add(new Pala(105, 50, 25, 50));
 
         Pelaaja pelaaja = new Pelaaja(hahmoPalat);
         pelaaja.setPutoavuus(true);
