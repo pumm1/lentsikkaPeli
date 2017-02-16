@@ -2,7 +2,7 @@
 
 Aiheenani on "Lentsikkapeli", jossa pelaajan on tarkoitus pit‰‰
 lentokone mahdollisimman pitk‰‰n ilmassa. Kone putoaa koko ajan, mutta
-pelaaja voi nostaa korkeutta hiukan nappia painamalla. 
+pelaaja voi nostaa korkeutta nappia painamalla. 
 Lentokoneen ilmassapitoa vaikeuttavat erilaiset esteet, kuten puiden latvat 
 ja linnut.
 
@@ -13,3 +13,7 @@ korvaamaan .png-muodossa olevilla kuvilla.
 
 ##Luokkakaavio
 ![Luokkakaavio](luokkakaavio.png)
+
+##Sekvenssikaaviot
+![Sekvenssikaavio 1](skaavio1.png)
+![Sekvenssikaavio 2](skaavio2.png)
