@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 8,
+      <title>File: 10,
              Errors: 1,
              Warnings: 0,
              Infos: 0
@@ -117,6 +117,34 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#sakureme.kayttoliittyma.Kayttoliittyma.java">sakureme/kayttoliittyma/Kayttoliittyma.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#sakureme.logiikka.Lintu.java">sakureme/logiikka/Lintu.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#sakureme.logiikka.Pelaaja.java">sakureme/logiikka/Pelaaja.java</a>
                 </td>
                 <td>
                   0

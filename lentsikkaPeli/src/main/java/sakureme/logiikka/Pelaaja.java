@@ -21,12 +21,20 @@ public class Pelaaja extends Hahmo {
     private boolean ladattu;
 
     //konstruktori saa parametreina palat, jotka muodostavat lentokoneen
+    /**
+     *
+     * @param i
+     */
     public Pelaaja(List<Pala> i) {
         super(i);
         ladattu = false;
     }
 
     //ei mahdollisteta sitä, että pelaaja huijaa pysymällä palikoiden ulottumattomissa!
+    /**
+     *
+     * @return
+     */
     public boolean peliAlueenSisalla() {
         if (this.getPalat().get(0).getY() < -10) {
             return false;
@@ -36,13 +44,16 @@ public class Pelaaja extends Hahmo {
         return true;
     }
 
+    /**
+     *
+     */
     public void lataaKuva() {
         //"D:\\Projekstit\\lentsikkaPeli\\lentsikkaPeli\\src\\lentsikka.png" <- talteen varalle
         //seuraavan avulla kaikilla koodin omaavilla pitäisi kuvien näkyä
-        File lentsikkaTiedosto = new File("src/lentsikka.png"); 
+        File lentsikkaTiedosto = new File("src/lentsikka.png");
 //        System.out.println(file.getAbsolutePath());
         kuva = new ImageIcon(lentsikkaTiedosto.getAbsolutePath()).getImage();
-        
+
         //varmennetaan vielä, että jos jokin menee pieleen, niin käytetään palikkagrafiikkaa
         if (kuva != null) {
             ladattu = true;

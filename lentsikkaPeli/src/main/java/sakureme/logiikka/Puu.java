@@ -13,6 +13,10 @@ import javax.swing.ImageIcon;
 /*
     Tälle luokalle ei tehdä alustavasti testejä, koska on käytännössä Hahmo-luokka
  */
+/**
+ *
+ * @author Sagu
+ */
 public class Puu extends Hahmo {
 
     private Image kuva;
@@ -31,11 +35,14 @@ public class Puu extends Hahmo {
         ladattu = false;
     }
 
+    /**
+     *
+     */
     public void lataaKuva() {
         //saadaan puun kvua hienosti käyttöön riippumatta siitä, minne kansiot sijoitettu koneella
         File puuTiedosto = new File("src/puu.png");
         kuva = new ImageIcon(puuTiedosto.getAbsolutePath()).getImage();
-        
+
         //varmennetaan vielä, että jos jokin menee pieleen, niin käytetään palikkagrafiikkaa
         if (kuva != null) {
             ladattu = true;

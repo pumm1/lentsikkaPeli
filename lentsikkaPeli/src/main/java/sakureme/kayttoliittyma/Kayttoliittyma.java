@@ -19,7 +19,7 @@ public class Kayttoliittyma implements Runnable {
     private int leveys;
     private int korkeus;
     private List<Hahmo> hahmot;
-    private Pelaaja hahmo;
+    private Pelaaja pelaaja;
 
     //kustomoitava koko ikkunalle konstruktorissa
     public Kayttoliittyma(int w, int h, Piirtoalusta a) {
@@ -29,8 +29,8 @@ public class Kayttoliittyma implements Runnable {
     }
 
     public void setPelattavaHahmo(Pelaaja i) {
-        hahmo = i;
-        hahmo.setPelattavuus(true);
+        pelaaja = i;
+        pelaaja.setPelattavuus(true);
     }
 
     //oletusarvoinen koko ikkunalle konstruktorissa
@@ -57,10 +57,10 @@ public class Kayttoliittyma implements Runnable {
 
     private void luoKomponentit(Container c) {
         alusta = new Piirtoalusta(hahmot);
-        alusta.setHahmo(hahmo);
+        alusta.setHahmo(pelaaja);
         c.add(alusta);
 
-        frame.addKeyListener(new Kuuntelija(hahmo, alusta));
+        frame.addKeyListener(new Kuuntelija(pelaaja, alusta));
     }
 
     @Override

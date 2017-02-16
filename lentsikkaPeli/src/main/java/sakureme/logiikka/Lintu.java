@@ -8,8 +8,19 @@ package sakureme.logiikka;
 /*
 Lintu-luokka, uhka ilmassa!
  */
+/**
+ *
+ * @author Sagu
+ */
 public class Lintu extends Hahmo {
 
+    /**
+     *
+     * @param x
+     * @param y
+     * @param w
+     * @param h
+     */
     public Lintu(int x, int y, int w, int h) {
         super(x, y, w, h);
     }

@@ -25,3 +25,4 @@ Päivä | Tunnit | Kuvaus
 14.02.2017 |1,0h| Pelaaja- ja Puu-olioille upeat .png-grafiikat ja pari testiä
 14.02.2017 |0,5h| Lintu-luokan alustamista
 15.02.2017 |0,5h| Kuvien lataamisen pitäisi onnistua kaikilla dynaamisesti
+16.02.2017 |0,5h| sekvenssikaaviota ja siistimistä

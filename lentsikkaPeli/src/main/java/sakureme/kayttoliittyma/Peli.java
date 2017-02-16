@@ -38,7 +38,7 @@ public class Peli {
         puu1.lataaKuva();
         puu2.lataaKuva();
         puu3.lataaKuva();
-        
+
 //        List<Pala> palat = new ArrayList<>();
         List<Hahmo> hahmot = new ArrayList<>();
 
@@ -50,11 +50,11 @@ public class Peli {
         hahmoPalat.add(new Pala(50, 50, 20, 20));
         hahmoPalat.add(new Pala(50, 70, 100, 20));
         hahmoPalat.add(new Pala(120, 60, 20, 20));
-        
+
         Pelaaja pelaaja = new Pelaaja(hahmoPalat);
         pelaaja.setPutoavuus(true);
         pelaaja.lataaKuva();
-        
+
         hahmot.add(puu1);
         hahmot.add(puu2);
         hahmot.add(pelaaja);
