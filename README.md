@@ -7,6 +7,6 @@ mahdollisimman pitk‰‰n, samalla esteit‰ v‰istellen.
 ##Dokumentaatio
 [Tuntikirjanpito](Dokumentaatio/Tuntikirjanpito.md)
 [Aiheenm‰‰rittely](Dokumentaatio/Aiheenmaarittely.md)
-[pit-raportti](https://htmlpreview.github.io/?https://github.com/pumm1/lentsikkaPeli/blob/master/Dokumentaatio/pit/201702161125/index.html)
+[pit-raportti](https://htmlpreview.github.io/?https://github.com/pumm1/lentsikkaPeli/blob/master/Dokumentaatio/pit/201702161409/index.html)
 [checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/pumm1/lentsikkaPeli/blob/master/Dokumentaatio/checkstyle/checkstyle.html)
 [luokkakaavio](Dokumentaatio/luokkakaavio.png)
