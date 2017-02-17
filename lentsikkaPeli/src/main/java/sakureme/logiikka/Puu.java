@@ -24,10 +24,10 @@ public class Puu extends Hahmo {
 
     /**
      *
-     * @param x
-     * @param y
-     * @param w
-     * @param h
+     * @param x puun x-koodrinaatti
+     * @param y puun y-koordinaatti
+     * @param w puun leveys
+     * @param h puun korkeus
      */
     public Puu(int x, int y, int w, int h) {
         super(x, y, w, h);
@@ -36,7 +36,7 @@ public class Puu extends Hahmo {
     }
 
     /**
-     *
+     * ladataan puun .png-kuva
      */
     public void lataaKuva() {
         //saadaan puun kvua hienosti käyttöön riippumatta siitä, minne kansiot sijoitettu koneella
@@ -49,7 +49,9 @@ public class Puu extends Hahmo {
         }
     }
 
-    //siirretään puu uudelle paikalleen, kun se on hävinnyt peliruudulta
+    /**
+     * siirretään puu uudelle paikalleen, kun se on hävinnyt peliruudulta
+     */
     @Override
     public void siirraUuteenPaikkaan() {
         dx = rand.nextInt(10) + 5;

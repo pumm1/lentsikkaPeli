@@ -21,10 +21,10 @@ public class Hahmo {
 
     /**
      *
-     * @param x
-     * @param y
-     * @param w
-     * @param h
+     * @param x hahmon X-koordinaatti
+     * @param y hahmon Y-koordinaatti
+     * @param w hahmon leveys
+     * @param h hahmon korkeus
      */
     public Hahmo(int x, int y, int w, int h) {  //konstruktori hahmolle, jolle ei anneta listaa paloista
         Pala eka = new Pala(x, y, w, h);
@@ -38,7 +38,7 @@ public class Hahmo {
     //konstruktori hahmolle, jolle annetaan heti kaikki palat
     /**
      *
-     * @param i
+     * @param i palat, joista hahmo koostuu
      */
     public Hahmo(List<Pala> i) {
         dx = -5;
@@ -48,7 +48,7 @@ public class Hahmo {
     /////getterit & setterit////////
     /**
      *
-     * @param i
+     * @param i pelattava-muuttujan arvo
      */
     public void setPelattavuus(boolean i) {
         pelattava = i;
@@ -56,7 +56,7 @@ public class Hahmo {
 
     /**
      *
-     * @return
+     * @return palautetaan pelattavuuden arvo
      */
     public boolean getPelattavuus() {
         return pelattava;
@@ -64,7 +64,7 @@ public class Hahmo {
 
     /**
      *
-     * @return
+     * @return palautetaan muuttuja dy
      */
     public int getDy() {
         return dy;
@@ -72,7 +72,7 @@ public class Hahmo {
 
     /**
      *
-     * @return
+     * @return palautetaan muuttuja putoaa
      */
     public boolean getPutoaa() {
         return putoaa;
@@ -80,7 +80,7 @@ public class Hahmo {
 
     /**
      *
-     * @return
+     * @return palautetaan hahmon palat
      */
     public List<Pala> getPalat() {
 
@@ -90,7 +90,7 @@ public class Hahmo {
     ///palojen lisäys//
     /**
      *
-     * @param i
+     * @param i lisätään hahmolle pala
      */
     public void lisaaPala(Pala i) {
 
@@ -99,7 +99,7 @@ public class Hahmo {
 
     /**
      *
-     * @param p
+     * @param p lisätään hahmolle lista paloja
      */
     public void lisaaPaloja(List<Pala> p) {
 
@@ -109,9 +109,8 @@ public class Hahmo {
     }
 
     ///////hahmon logiikka////////
-    //koordinaatisto "väärinpäin", joten hypyssä suunta negatiivinen
     /**
-     *
+     * koordinaatisto "väärinpäin", joten hypyssä suunta negatiivinen
      */
     public void hyppaa() {
         dy = -7;
@@ -119,7 +118,7 @@ public class Hahmo {
 
     /**
      *
-     * @param i
+     * @param i asetetaan putoavuuden arvo
      */
     public void setPutoavuus(boolean i) {
         putoaa = i;
@@ -144,8 +143,8 @@ public class Hahmo {
     //tarkistetaan, osuuko Hahmo toiseen hahmoon
     /**
      *
-     * @param i
-     * @return
+     * @param i osuu this.hahmo?
+     * @return totuusarvo kysymykselle
      */
     public boolean osuu(Hahmo i) {
 
@@ -162,10 +161,10 @@ public class Hahmo {
         return false;
     }
 
-    //hahmon palojen liikuttelu x-suunnassa
     /**
+     * hahmon palojen liikuttelu x-suunnassa
      *
-     * @param a
+     * @param a liikuta paloja X-suunnassa tämän verran
      */
     public void liikuX(int a) {
 
@@ -174,10 +173,10 @@ public class Hahmo {
         }
     }
 
-    //hahmon palojen liikuttelu y-suunnassa
     /**
+     * hahmon palojen liikuttelu y-suunnassa
      *
-     * @param a
+     * @param a liikuta paloja Y-suunnassa tämän verran
      */
     public void liikuY(int a) {
 
@@ -186,9 +185,8 @@ public class Hahmo {
         }
     }
 
-    //yhdistetään putoaminen ja liikkuminen
     /**
-     *
+     * yhdistetään putoaminen ja liikkuminen
      */
     public void liiku() {
         if (putoaa) {
@@ -224,11 +222,8 @@ public class Hahmo {
         this.liikuX(tempX);
     }
 
-    //piirretään hahmon palat
-    //myöhemmässä vaiheessa tämä pyritään korvaamaan hahmon .png-kuvan piirtämisellä
     /**
-     *
-     * @param g
+     * @param g hyödynnetään Javan Graphics-oliota
      */
     public void piirraPalat(Graphics g) {
 

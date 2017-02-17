@@ -20,18 +20,19 @@ public class Pelaaja extends Hahmo {
     private Image kuva;
     private boolean ladattu;
 
-    //konstruktori saa parametreina palat, jotka muodostavat lentokoneen
     /**
+     * konstruktori saa parametreina palat, jotka muodostavat lentokoneen
      *
-     * @param i
+     * @param i lista pelaajan paloista
      */
     public Pelaaja(List<Pala> i) {
         super(i);
         ladattu = false;
     }
 
-    //ei mahdollisteta sitä, että pelaaja huijaa pysymällä palikoiden ulottumattomissa!
     /**
+     * ei mahdollisteta sitä, että pelaaja huijaa pysymällä palikoiden
+     * ulottumattomissa!
      *
      * @return
      */
@@ -45,7 +46,7 @@ public class Pelaaja extends Hahmo {
     }
 
     /**
-     *
+     * ladataan pelaajan .png-kuva
      */
     public void lataaKuva() {
         //"D:\\Projekstit\\lentsikkaPeli\\lentsikkaPeli\\src\\lentsikka.png" <- talteen varalle

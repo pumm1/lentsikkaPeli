@@ -10,8 +10,8 @@ import java.awt.Image;
 import java.io.File;
 import javax.swing.ImageIcon;
 
-/*
-Lintu-luokka, uhka ilmassa!
+/**
+ * Lintu-luokka, uhka ilmassa!
  */
 /**
  *
@@ -25,10 +25,10 @@ public class Lintu extends Hahmo {
 
     /**
      *
-     * @param x
-     * @param y
-     * @param w
-     * @param h
+     * @param x linnun x-koordinaatti
+     * @param y linnnu y-koordinaatti
+     * @param w linnun leveys
+     * @param h linnun korkeus
      */
     public Lintu(int x, int y, int w, int h) {
         super(x, y, w, h);
@@ -51,6 +51,9 @@ public class Lintu extends Hahmo {
         }
     }
 
+    /**
+     * muutetaan liikkuminen niin, että lintu liikkuu ilmassa arvaamattomammin
+     */
     @Override
     public void liiku() {
 

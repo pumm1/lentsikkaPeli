@@ -15,10 +15,10 @@ public class Pala {
 
     /**
      *
-     * @param ax
-     * @param yy
-     * @param w
-     * @param h
+     * @param ax palan X-koordinaatti
+     * @param yy palan Y-koordinaatti
+     * @param w palan leveys
+     * @param h palan korkeus
      */
     public Pala(int ax, int yy, int w, int h) {
         x = ax;
@@ -30,7 +30,7 @@ public class Pala {
     ////////////getterit///////////////
     /**
      *
-     * @return
+     * @return palauta palan X-koordinaatti
      */
     public int getX() {
         return x;
@@ -38,7 +38,7 @@ public class Pala {
 
     /**
      *
-     * @return
+     * @return palauta palan Y-koodrinaattti
      */
     public int getY() {
         return y;
@@ -46,7 +46,7 @@ public class Pala {
 
     /**
      *
-     * @return
+     * @return palauta palan leveys
      */
     public int getLeveys() {
         return leveys;
@@ -54,7 +54,7 @@ public class Pala {
 
     /**
      *
-     * @return
+     * @return palauta palan leveys
      */
     public int getKorkeus() {
         return korkeus;
@@ -63,8 +63,8 @@ public class Pala {
     ////kahden palasen osumisen logiikka////
     /**
      *
-     * @param i
-     * @return
+     * @param i osuu tähän palaan?
+     * @return palauta kysymyksen totuusarvo
      */
     public boolean osuuko(Pala i) {
 
@@ -80,7 +80,7 @@ public class Pala {
     /////palan liikukuminen////////////
     /**
      *
-     * @param i
+     * @param i liikuta palaa X-suunnassa tämän verran
      */
     public void liikuX(int i) {
         x += i;
@@ -88,7 +88,7 @@ public class Pala {
 
     /**
      *
-     * @param j
+     * @param j liikuta palaa Y-suunnassa tämän verran
      */
     public void liikuY(int j) {
         y += j;
@@ -96,11 +96,10 @@ public class Pala {
 
     //////palan piirtäminen///////
     //alustavasti hyödynnetään Javan Graphics-oliota pelin testaamiseen
-    //pyritään käyttämään lopussa .png-kuvia
     //pala koostuu neliöstä, jonka vasen ylänurkka koordinaateissa (x,y) ja koko leveys*korkeus (voidaan tarvittaessa muuttaa)
     /**
      *
-     * @param g
+     * @param g piirrä pala Javan Graphics-oliolla
      */
     public void piirra(Graphics g) {
         g.fillRect(x, y, leveys, korkeus);
