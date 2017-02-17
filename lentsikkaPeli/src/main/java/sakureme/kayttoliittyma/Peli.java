@@ -82,7 +82,7 @@ public class Peli {
     }
 
     public int arvoX() {
-        int x = rand.nextInt(800) + 400;
+        int x = rand.nextInt(800) + 500;
         return x;
     }
 
