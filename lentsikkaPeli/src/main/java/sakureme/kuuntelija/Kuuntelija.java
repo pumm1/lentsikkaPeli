@@ -31,7 +31,7 @@ public class Kuuntelija implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
+        if (e.getKeyCode() == KeyEvent.VK_SPACE) {
             hahmo.hyppaa();
         }
 

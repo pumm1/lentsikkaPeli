@@ -87,7 +87,7 @@ public class Lintu extends Hahmo {
             y = 0 + rand.nextInt(15);
         }
         this.liikuY(y);
-        int tempX = rand.nextInt(500) + 1200 + rand.nextInt(400) + rand.nextInt(200);
+        int tempX = rand.nextInt(500) + 1200 + rand.nextInt(400) + rand.nextInt(400);
         this.liikuX(tempX);
     }
 

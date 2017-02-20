@@ -29,3 +29,4 @@ Päivä | Tunnit | Kuvaus
 16.02.2017 |0,5h| Testejä ja pientä twiikkailua
 16.02.2017 |1,0h| Lintugrafiikkan lisäämistä ja lintujen käytöksen muutosta
 16.02.2017 |1,0h| Pelaajagrafiikan parantamista
+19.02.2017 |1,0h| Game Over-tekstin väsääminen ja implementointi

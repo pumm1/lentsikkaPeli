@@ -54,6 +54,11 @@ public class Peli {
         Lintu pulu = new Lintu(x, y, 60, 60);
         pulu.lataaKuva();
 
+        x = arvoX() + arvoX();
+        y = arvoLintuY();
+        Lintu tipu = new Lintu(x, y, 60, 60);
+        tipu.lataaKuva();
+
 //        List<Pala> palat = new ArrayList<>();
         List<Hahmo> hahmot = new ArrayList<>();
 
@@ -75,6 +80,7 @@ public class Peli {
         hahmot.add(puu3);
         hahmot.add(tirppa);
         hahmot.add(pulu);
+        hahmot.add(tipu);
         hahmot.add(pelaaja);
 
         kayttis.lisaaHahmot(hahmot);
@@ -82,7 +88,7 @@ public class Peli {
     }
 
     public int arvoX() {
-        int x = rand.nextInt(800) + 500;
+        int x = rand.nextInt(800) + 600;
         return x;
     }
 

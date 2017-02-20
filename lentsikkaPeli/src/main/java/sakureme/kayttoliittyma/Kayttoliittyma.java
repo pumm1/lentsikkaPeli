@@ -28,15 +28,15 @@ public class Kayttoliittyma implements Runnable {
         alusta = a;
     }
 
-    public void setPelattavaHahmo(Pelaaja i) {
-        pelaaja = i;
-        pelaaja.setPelattavuus(true);
-    }
-
     //oletusarvoinen koko ikkunalle konstruktorissa
     public Kayttoliittyma() {
         leveys = 640;
         korkeus = 480;
+    }
+
+    public void setPelattavaHahmo(Pelaaja i) {
+        pelaaja = i;
+        pelaaja.setPelattavuus(true);
     }
 
     public void setAlusta(Piirtoalusta i) {

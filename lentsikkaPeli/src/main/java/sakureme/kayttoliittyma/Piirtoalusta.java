@@ -44,10 +44,13 @@ public class Piirtoalusta extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (!pelaaja.peliAlueenSisalla()) { //hävisit pelin
-            timer.stop();
-        }
+
         if (e.getSource() == timer) {
+            if (!pelaaja.peliAlueenSisalla()) { //hävisit pelin
+                pelaaja.kuolee();
+                repaint();
+                timer.stop();
+            }
             for (Hahmo i : hahmot) {
                 i.putoa();
                 if (i.getPelattavuus() == false) {
@@ -58,6 +61,8 @@ public class Piirtoalusta extends JPanel implements ActionListener {
                 }
                 if (!i.equals(pelaaja)) {
                     if (pelaaja.osuu(i)) {  //hävisit pelin
+                        pelaaja.kuolee();
+                        repaint();
                         timer.stop();
                     }
                 }

@@ -54,14 +54,14 @@ public class Puu extends Hahmo {
      */
     @Override
     public void siirraUuteenPaikkaan() {
-        dx = rand.nextInt(10) + 5;
+        dx = rand.nextInt(8) + 5;
         dx = dx * (-1);
         int y = rand.nextInt(50) + 30;
         if (palat.get(0).getY() >= 280) {   //estetään puun häviäminen ruudulta
             y = y * (-1);
         }
         this.liikuY(y);
-        int tempX = rand.nextInt(900) + 1200 + rand.nextInt(400);
+        int tempX = rand.nextInt(900) + 1200 + rand.nextInt(400) + rand.nextInt(300);
         this.liikuX(tempX);
     }
 

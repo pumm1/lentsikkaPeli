@@ -5,6 +5,7 @@
  */
 package sakureme.logiikka;
 
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
@@ -17,8 +18,16 @@ import javax.swing.ImageIcon;
  */
 public class Pelaaja extends Hahmo {
 
+    private List<String> loput; //lista mahdollisista game over-teksteistä
     private Image kuva;
     private boolean ladattu;
+    private boolean elossa = true;
+    private long alku;
+    private long loppu;
+    private int aika;
+    private int sec; //sekunnit
+    private int msec; //millisekunnit
+    private String gameOver;
 
     /**
      * konstruktori saa parametreina palat, jotka muodostavat lentokoneen
@@ -28,6 +37,18 @@ public class Pelaaja extends Hahmo {
     public Pelaaja(List<Pala> i) {
         super(i);
         ladattu = false;
+        alku = System.currentTimeMillis();
+        loput = new ArrayList<>();
+        String g0 = "Hävisit pelin";
+        String g1 = "Nyt tuli noutaja!";
+        String g2 = "Niinpä tietysti.";
+        String g3 = "GAME OVER";
+        String g4 = "Sattuko pahasti?";
+        loput.add(g0);
+        loput.add(g1);
+        loput.add(g2);
+        loput.add(g3);
+        loput.add(g4);
     }
 
     /**
@@ -61,6 +82,19 @@ public class Pelaaja extends Hahmo {
         }
     }
 
+    public boolean getElossa() {
+        return elossa;
+    }
+
+    public void kuolee() {  // rip :(
+        elossa = false;
+        loppu = System.currentTimeMillis();
+        long temp = loppu - alku;
+        aika = (int) temp;
+        msec = aika % 1000;
+        sec = (aika - msec) / 1000;
+    }
+
     @Override
     public void piirraPalat(Graphics g) {
         if (ladattu) {
@@ -71,6 +105,18 @@ public class Pelaaja extends Hahmo {
             for (Pala i : palat) {
                 i.piirra(g);
             }
+        }
+        if (!elossa) {      //annetaan selkeämpi merkki pelaajalle pelin päättymisestä
+            String s = Integer.toString(sec);
+            String ms = Integer.toString(msec);
+            if (gameOver == null) {
+                int i = rand.nextInt(loput.size());
+                gameOver = loput.get(i);
+            }
+            String time = "Aika: " + sec + "," + msec + "s";
+            g.setFont(new Font("Arial", Font.PLAIN, 40));
+            g.drawString(gameOver, 180, 200);
+            g.drawString(time, 180, 250);
         }
     }
 
