@@ -116,7 +116,8 @@ public class Peli {
         return y;
     }
 
-    public void aloita() {
+    public void aloita() throws IOException {
+        this.alustaHahmot();
         SwingUtilities.invokeLater(kayttis);
     }
 

@@ -61,7 +61,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="sakureme.logiikka.PelaajaTest" name="kuoleminenToimii" time="0"/>
-  <testcase classname="sakureme.logiikka.PelaajaTest" name="tunnistaaPeliAlueenSisalla" time="0.001"/>
-  <testcase classname="sakureme.logiikka.PelaajaTest" name="kuvanLatausToimii" time="0.003"/>
+  <testcase classname="sakureme.logiikka.PelaajaTest" name="kuoleminenToimii" time="0.001"/>
+  <testcase classname="sakureme.logiikka.PelaajaTest" name="tunnistaaPeliAlueenSisalla" time="0"/>
+  <testcase classname="sakureme.logiikka.PelaajaTest" name="kuvanLatausToimii" time="0.004"/>
 </testsuite>

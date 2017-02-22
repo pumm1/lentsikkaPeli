@@ -21,7 +21,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Peli peli = new Peli();
-        peli.alustaHahmot();
+//        peli.alustaHahmot();
         peli.aloita();
     }
 
