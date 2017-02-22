@@ -7,8 +7,12 @@ package sakureme.logiikka;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 /**
@@ -29,9 +33,11 @@ public class Pilvi extends Hahmo {
         ladattu = false;
     }
 
-    public void lataaKuva() {
-        File pilviTiedosto = new File("src/pilvi.png");
-        kuva = new ImageIcon(pilviTiedosto.getAbsolutePath()).getImage();
+    public void lataaKuva() throws IOException {
+//        File pilviTiedosto = new File("src/main/resources/pilvi.png");
+        InputStream is = getClass().getClassLoader().getResourceAsStream("pilvi.png");
+        BufferedImage im = ImageIO.read(is);
+        kuva = kuva = (BufferedImage) im;
         if (kuva != null) {
             ladattu = true;
         }

@@ -8,9 +8,13 @@ package sakureme.logiikka;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 /**
@@ -69,12 +73,13 @@ public class Pelaaja extends Hahmo {
     /**
      * ladataan pelaajan .png-kuva
      */
-    public void lataaKuva() {
+    public void lataaKuva() throws IOException {
         //"D:\\Projekstit\\lentsikkaPeli\\lentsikkaPeli\\src\\lentsikka.png" <- talteen varalle
         //seuraavan avulla kaikilla koodin omaavilla pitäisi kuvien näkyä
-        File lentsikkaTiedosto = new File("src/lentsikka.png");
+        InputStream is = getClass().getClassLoader().getResourceAsStream("lentsikka.png");
 //        System.out.println(file.getAbsolutePath());
-        kuva = new ImageIcon(lentsikkaTiedosto.getAbsolutePath()).getImage();
+        BufferedImage im = ImageIO.read(is);
+        kuva = (BufferedImage) im;
 
         //varmennetaan vielä, että jos jokin menee pieleen, niin käytetään palikkagrafiikkaa
         if (kuva != null) {

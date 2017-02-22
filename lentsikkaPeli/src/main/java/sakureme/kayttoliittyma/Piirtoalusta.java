@@ -59,7 +59,6 @@ public class Piirtoalusta extends JPanel implements ActionListener {
                     if (i instanceof Pilvi) {
                         if (((Pilvi) i).getX() <= -100){
                             i.siirraUuteenPaikkaan();
-                            System.out.println("pilvi siirtyi");
                         }
                     } else if (i.getPalat().get(0).getX() <= -300) {
                         i.siirraUuteenPaikkaan();

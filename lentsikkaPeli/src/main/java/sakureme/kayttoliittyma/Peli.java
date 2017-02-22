@@ -5,6 +5,7 @@
  */
 package sakureme.kayttoliittyma;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -31,7 +32,7 @@ public class Peli {
     }
 
     //luodaan hahmot ja asetetaan ne paikalleen
-    public void alustaHahmot() {
+    public void alustaHahmot() throws IOException {
         List<Pala> b = new ArrayList<>();
         int x = rand.nextInt(400) + 100;
         int y = rand.nextInt(20) + 30;
@@ -87,6 +88,7 @@ public class Peli {
         pelaaja.lataaKuva();
 
         hahmot.add(pilvi1);
+        hahmot.add(pilvi2);
         hahmot.add(puu1);
         hahmot.add(puu2);
         hahmot.add(puu3);

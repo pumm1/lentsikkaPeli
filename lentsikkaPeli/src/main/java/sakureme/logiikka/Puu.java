@@ -7,7 +7,11 @@ package sakureme.logiikka;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 /*
@@ -38,11 +42,12 @@ public class Puu extends Hahmo {
     /**
      * ladataan puun .png-kuva
      */
-    public void lataaKuva() {
+    public void lataaKuva() throws IOException {
         //saadaan puun kvua hienosti käyttöön riippumatta siitä, minne kansiot sijoitettu koneella
-        File puuTiedosto = new File("src/puu.png");
-        kuva = new ImageIcon(puuTiedosto.getAbsolutePath()).getImage();
-
+//        File puuTiedosto = new File("src/main/resources/puu.png");
+        InputStream is = getClass().getClassLoader().getResourceAsStream("puu.png");
+        BufferedImage im = ImageIO.read(is);
+        kuva = kuva = (BufferedImage) im;
         //varmennetaan vielä, että jos jokin menee pieleen, niin käytetään palikkagrafiikkaa
         if (kuva != null) {
             ladattu = true;

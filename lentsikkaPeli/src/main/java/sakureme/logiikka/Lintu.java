@@ -7,7 +7,11 @@ package sakureme.logiikka;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 /**
@@ -54,10 +58,10 @@ public class Lintu extends Hahmo {
         return dy;
     }
 
-    public void lataaKuva() {
-        File tirppaTiedosto = new File("src/tirppa.png");
-        kuva = new ImageIcon(tirppaTiedosto.getAbsolutePath()).getImage();
-
+    public void lataaKuva() throws IOException {
+        InputStream is = getClass().getClassLoader().getResourceAsStream("tirppa.png");
+        BufferedImage im = ImageIO.read(is);
+        kuva = kuva = (BufferedImage) im;
         if (kuva != null) {
             ladattu = true;
         }

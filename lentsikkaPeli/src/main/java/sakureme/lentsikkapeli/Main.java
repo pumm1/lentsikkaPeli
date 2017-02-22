@@ -5,6 +5,7 @@
  */
 package sakureme.lentsikkapeli;
 
+import java.io.IOException;
 import sakureme.logiikka.Hahmo;
 import sakureme.logiikka.Pala;
 import java.util.*;
@@ -17,7 +18,7 @@ public class Main {
     /**
      * Ohjelman käynnistys täältä
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Peli peli = new Peli();
         peli.alustaHahmot();
