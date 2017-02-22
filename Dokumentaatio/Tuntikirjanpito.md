@@ -32,3 +32,4 @@ P‰iv‰ | Tunnit | Kuvaus
 19.02.2017 |1,0h| Game Over-tekstin v‰s‰‰minen ja implementointi
 21.02.2017 |0,5h| Testien hiomista
 22.02.2017 |1,0h| Vaarattomien pilvien lis‰‰minen
+22.02.2017 |1,0h| Testej‰ ja dokumentaatiota
