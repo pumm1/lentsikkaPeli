@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 sakureme\kayttoliittyma\KayttoliittymaTest.class
 sakureme\logiikka\PalaTest.class
 sakureme\logiikka\PuuTest.class
 sakureme\logiikka\HahmoTest.class
 sakureme\logiikka\LintuTest.class
 sakureme\logiikka\PelaajaTest.class
+=======
+sakureme/logiikka/LintuTest.class
+sakureme/logiikka/PalaTest.class
+sakureme/logiikka/HahmoTest.class
+sakureme/kayttoliittyma/KayttoliittymaTest.class
+sakureme/logiikka/PuuTest.class
+sakureme/logiikka/PelaajaTest.class
+>>>>>>> a9d4b0f9bb0c878af9a34551d8325134a2ad9e54
