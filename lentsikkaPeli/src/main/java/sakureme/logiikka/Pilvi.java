@@ -26,6 +26,12 @@ public class Pilvi extends Hahmo {
     private Image kuva;
     private boolean ladattu;
 
+    /**
+     *
+     * @param i
+     * @param a
+     * @param b
+     */
     public Pilvi(List<Pala> i, int a, int b) {
         super(i);
         x = a;
@@ -33,10 +39,18 @@ public class Pilvi extends Hahmo {
         ladattu = false;
     }
 
+    /**
+     *
+     * @return kuva
+     */
     public Image getKuva() {
         return kuva;
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     public void lataaKuva() throws IOException {
 //        File pilviTiedosto = new File("src/main/resources/pilvi.png");
         InputStream is = getClass().getClassLoader().getResourceAsStream("pilvi.png");
@@ -52,14 +66,25 @@ public class Pilvi extends Hahmo {
         x += dx;
     }
 
+    /**
+     *
+     * @return x
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     *
+     * @return y
+     */
     public int getY() {
         return y;
     }
 
+    /**
+     *
+     */
     public void siirraUuteenPaikkaan() {
         dx = rand.nextInt(3) + 2;
         dx = dx * (-1);

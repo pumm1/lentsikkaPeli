@@ -41,6 +41,8 @@ public class Puu extends Hahmo {
 
     /**
      * ladataan puun .png-kuva
+     *
+     * @throws java.io.IOException
      */
     public void lataaKuva() throws IOException {
         //saadaan puun kvua hienosti käyttöön riippumatta siitä, minne kansiot sijoitettu koneella
@@ -54,6 +56,10 @@ public class Puu extends Hahmo {
         }
     }
 
+    /**
+     *
+     * @return kuva
+     */
     public Image getKuva() {
         return kuva;
     }

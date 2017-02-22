@@ -46,10 +46,18 @@ public class Lintu extends Hahmo {
         }
     }
 
+    /**
+     *
+     * @return suunta
+     */
     public boolean getSuunta() {
         return suunta;
     }
 
+    /**
+     *
+     * @return dx
+     */
     public int getDx() {
         return dx;
     }
@@ -58,6 +66,10 @@ public class Lintu extends Hahmo {
         return dy;
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     public void lataaKuva() throws IOException {
         InputStream is = getClass().getClassLoader().getResourceAsStream("tirppa.png");
         BufferedImage im = ImageIO.read(is);
@@ -67,6 +79,10 @@ public class Lintu extends Hahmo {
         }
     }
 
+    /**
+     *
+     * @return kuva
+     */
     public Image getKuva() {
         return kuva;
     }
@@ -93,6 +109,9 @@ public class Lintu extends Hahmo {
         }
     }
 
+    /**
+     * siirretään lintu
+     */
     @Override
     public void siirraUuteenPaikkaan() {
         dx = rand.nextInt(10) + 6;
