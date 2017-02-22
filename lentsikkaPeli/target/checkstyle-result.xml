@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\kayttoliittyma\Kayttoliittyma.java">
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\kayttoliittyma\Peli.java">
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\kayttoliittyma\Piirtoalusta.java">
+<error line="60" column="25" severity="error" message="Nested if-else depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck"/>
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\kuuntelija\Kuuntelija.java">
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\lentsikkapeli\Main.java">
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\logiikka\Hahmo.java">
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\logiikka\Lintu.java">
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\logiikka\Pala.java">
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\logiikka\Pelaaja.java">
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\logiikka\Pilvi.java">
+</file>
+<file name="D:\Projekstit\lentsikkaPeli\lentsikkaPeli\src\main\java\sakureme\logiikka\Puu.java">
+</file>
+</checkstyle>

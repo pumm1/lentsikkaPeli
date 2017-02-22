@@ -54,6 +54,10 @@ public class Puu extends Hahmo {
         }
     }
 
+    public Image getKuva() {
+        return kuva;
+    }
+
     /**
      * siirretään puu uudelle paikalleen, kun se on hävinnyt peliruudulta
      */

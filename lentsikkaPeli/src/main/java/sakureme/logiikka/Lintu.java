@@ -67,12 +67,15 @@ public class Lintu extends Hahmo {
         }
     }
 
+    public Image getKuva() {
+        return kuva;
+    }
+
     /**
      * muutetaan liikkuminen niin, että lintu liikkuu ilmassa arvaamattomammin
      */
     @Override
     public void liiku() {
-
         this.liikuX(dx);
         this.liikuY(dy);
         if (suunta) {
@@ -88,7 +91,6 @@ public class Lintu extends Hahmo {
                 dy--;
             }
         }
-
     }
 
     @Override

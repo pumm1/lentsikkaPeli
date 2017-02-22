@@ -33,6 +33,10 @@ public class Pilvi extends Hahmo {
         ladattu = false;
     }
 
+    public Image getKuva() {
+        return kuva;
+    }
+
     public void lataaKuva() throws IOException {
 //        File pilviTiedosto = new File("src/main/resources/pilvi.png");
         InputStream is = getClass().getClassLoader().getResourceAsStream("pilvi.png");

@@ -87,6 +87,10 @@ public class Pelaaja extends Hahmo {
         }
     }
 
+    public Image getKuva() {
+        return kuva;
+    }
+
     public boolean getElossa() {
         return elossa;
     }

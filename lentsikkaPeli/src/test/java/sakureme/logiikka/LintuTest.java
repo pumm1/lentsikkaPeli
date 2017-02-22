@@ -5,6 +5,8 @@
  */
 package sakureme.logiikka;
 
+import java.awt.Image;
+import java.io.IOException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,8 +45,8 @@ public class LintuTest {
     public void siirtoUuteenPaikkaanToimii() {
         int y = lintu.getPalat().get(0).getY();
         int temp = y;
-        lintu.siirraUuteenPaikkaan();
         boolean toimii = false;
+        lintu.siirraUuteenPaikkaan();
         int x = lintu.getPalat().get(0).getX();
         y = lintu.getPalat().get(0).getY();
         if (x == 50) {
@@ -53,10 +55,13 @@ public class LintuTest {
             toimii = true;
         }
 
-        if (y == temp) {
-            toimii = false;
-        } else {
+        if (y != temp) {
             toimii = true;
+        }
+        if (lintu.dx > -16 && lintu.dx <= -6) {
+            toimii = true;
+        } else {
+            toimii = false;
         }
 
         assertEquals(true, toimii);
@@ -98,6 +103,18 @@ public class LintuTest {
             if (dy != tempDy) {
                 toimii = true;
             }
+        }
+        assertEquals(true, toimii);
+    }
+
+    //testi23
+    @Test
+    public void kuvanLatausToimii() throws IOException {
+        boolean toimii = false;
+        lintu.lataaKuva();
+        Image k = lintu.getKuva();
+        if (k != null) {
+            toimii = true;
         }
         assertEquals(true, toimii);
     }

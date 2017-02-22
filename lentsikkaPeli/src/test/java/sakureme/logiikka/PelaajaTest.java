@@ -5,6 +5,8 @@
  */
 package sakureme.logiikka;
 
+import java.awt.Image;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.After;
@@ -68,6 +70,18 @@ public class PelaajaTest {
         elos = p.getElossa();
         assertEquals(false, elos);
 
+    }
+
+    //testi25
+    @Test
+    public void kuvanLatausToimii() throws IOException {
+        boolean toimii = false;
+        p.lataaKuva();
+        Image k = p.getKuva();
+        if (k != null) {
+            toimii = true;
+        }
+        assertEquals(true, toimii);
     }
 
 }

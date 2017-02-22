@@ -5,6 +5,8 @@
  */
 package sakureme.logiikka;
 
+import java.awt.Image;
+import java.io.IOException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -27,6 +29,7 @@ public class PuuTest {
     //testi16
     @Test
     public void siirtoUuteenPaikkaanToimii() {
+        boolean toimii = false;
         int x = p1.getPalat().get(0).getX();
         int y = p1.getPalat().get(0).getY();
         int temp = y;
@@ -38,17 +41,32 @@ public class PuuTest {
         x = p1.getPalat().get(0).getX();
         y = p1.getPalat().get(0).getY();
 
-        boolean siirto = false;
-
         //tarkistetaan, ettei puu ole enää samalla paikalla kuin aiemmin
         if (x >= 900) {
             if (y != temp) {
-                siirto = true;
+                toimii = true;
             }
         }
-        
-        
-        assertEquals(true, siirto);
+
+        if (p1.dx > -13 && p1.dx <= -5) {
+            toimii = true;
+        } else {
+            toimii = false;
+        }
+
+        assertEquals(true, toimii);
+    }
+
+    //testi26
+    @Test
+    public void kuvanLatausToimii() throws IOException {
+        boolean toimii = false;
+        p1.lataaKuva();
+        Image k = p1.getKuva();
+        if (k != null) {
+            toimii = true;
+        }
+        assertEquals(true, toimii);
     }
 
 }

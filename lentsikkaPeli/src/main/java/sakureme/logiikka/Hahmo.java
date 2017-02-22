@@ -3,10 +3,6 @@ package sakureme.logiikka;
 import java.awt.Graphics;
 import java.util.*;
 
-/**
- *
- * @author Sagu
- */
 public class Hahmo {
 
     /**
@@ -83,7 +79,6 @@ public class Hahmo {
      * @return palautetaan hahmon palat
      */
     public List<Pala> getPalat() {
-
         return palat;
     }
 
@@ -93,7 +88,6 @@ public class Hahmo {
      * @param i lisätään hahmolle pala
      */
     public void lisaaPala(Pala i) {
-
         palat.add(i);
     }
 
@@ -102,13 +96,11 @@ public class Hahmo {
      * @param p lisätään hahmolle lista paloja
      */
     public void lisaaPaloja(List<Pala> p) {
-
         for (Pala i : p) {
             palat.add(i);
         }
     }
 
-    ///////hahmon logiikka////////
     /**
      * koordinaatisto "väärinpäin", joten hypyssä suunta negatiivinen
      */
@@ -129,7 +121,6 @@ public class Hahmo {
      *
      */
     public void putoa() {
-
         if (putoaa) {   //turhaan toteuttaa ylimääräistä työtä, jos hahmoa ei ole määritelty putoavaksi
             for (Pala i : palat) {
                 i.liikuY(dy);
@@ -140,16 +131,13 @@ public class Hahmo {
         }
     }
 
-    //tarkistetaan, osuuko Hahmo toiseen hahmoon
     /**
      *
      * @param i osuu this.hahmo?
      * @return totuusarvo kysymykselle
      */
     public boolean osuu(Hahmo i) {
-
         List<Pala> kohde = i.getPalat();
-
         for (Pala a : palat) {
             for (Pala b : kohde) {
                 if (a.osuuko(b)) {       //pala a osuu palaan b
@@ -157,7 +145,6 @@ public class Hahmo {
                 }
             }
         }
-
         return false;
     }
 
@@ -167,7 +154,6 @@ public class Hahmo {
      * @param a liikuta paloja X-suunnassa tämän verran
      */
     public void liikuX(int a) {
-
         for (Pala i : palat) {
             i.liikuX(a);
         }
@@ -179,7 +165,6 @@ public class Hahmo {
      * @param a liikuta paloja Y-suunnassa tämän verran
      */
     public void liikuY(int a) {
-
         for (Pala i : palat) {
             i.liikuY(a);
         }
@@ -200,36 +185,14 @@ public class Hahmo {
         this.liikuX(dx);
     }
 
-    /**
-     * ei tarvitse testata, koska hyödynnetään vain liikuX ja liikuY ja arvotaan
-     * uusi paikka tätä mahdollisesti muokataan, koska tämä ei huomioi esteen
-     * "tyyppiä" (puu/tolppa, lintu...) käytetään, kun hahmo menee kentän
-     * reunojen yli ja se "respwnaa" tulevaisuudessa pyritään tekemään
-     * jokaiselle hahmotyypille oma luokka, joka perii Hahmo-luokan
-     */
     public void siirraUuteenPaikkaan() {
-        dx = rand.nextInt(5) + 4;
-        dx = dx * (-1);
-        int y = rand.nextInt(100) + 100;
-        if (palat.get(0).getY() >= 300) {   //ei siirretä alas, jos menee kentästä ulos
-            int kerroin = rand.nextInt(2);  //määrää sen, liikutetaanko hahmoa ylös vai alas
-            if (kerroin == 0) {
-                y = y * (-1);
-            }
-        }
-        this.liikuY(y);
-        int tempX = rand.nextInt(1000) + 800;  //liikutetaan x-suunnassa uudelleen esteeksi
-        this.liikuX(tempX);
+        //tämä korvattu kaikissa muissa
     }
 
     /**
      * @param g hyödynnetään Javan Graphics-oliota
      */
     public void piirraPalat(Graphics g) {
-
-        for (Pala i : palat) {
-            i.piirra(g);
-        }
+        //toteutus korvattu muissa
     }
-
 }
