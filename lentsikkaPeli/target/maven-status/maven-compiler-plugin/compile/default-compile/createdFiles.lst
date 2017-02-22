@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 sakureme\kuuntelija\Kuuntelija.class
 sakureme\logiikka\Lintu.class
 sakureme\kayttoliittyma\Piirtoalusta.class
@@ -10,16 +9,3 @@ sakureme\logiikka\Hahmo.class
 sakureme\logiikka\Pelaaja.class
 sakureme\logiikka\Pilvi.class
 sakureme\logiikka\Puu.class
-=======
-sakureme/logiikka/Pilvi.class
-sakureme/kayttoliittyma/Peli.class
-sakureme/logiikka/Pelaaja.class
-sakureme/logiikka/Hahmo.class
-sakureme/kayttoliittyma/Kayttoliittyma.class
-sakureme/lentsikkapeli/Main.class
-sakureme/logiikka/Puu.class
-sakureme/kuuntelija/Kuuntelija.class
-sakureme/kayttoliittyma/Piirtoalusta.class
-sakureme/logiikka/Pala.class
-sakureme/logiikka/Lintu.class
->>>>>>> a9d4b0f9bb0c878af9a34551d8325134a2ad9e54
