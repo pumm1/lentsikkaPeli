@@ -21,41 +21,53 @@ testataan vain Hahmo-luokalle uusi metodi, jolla tarkistetaan onko pelaaja pelia
 public class PelaajaTest {
 
     private Pelaaja p;
+    private Hahmo h;
 
     @Before
     public void setUp() {
         List<Pala> palat = new ArrayList<>();
         palat.add(new Pala(50, 50, 20, 20));
         p = new Pelaaja(palat);
+        h = new Hahmo(50, 30, 20, 20);
     }
-    
-    
+
     //testi17
     @Test
-    public void tunnistaaPeliAlueenSisalla(){
+    public void tunnistaaPeliAlueenSisalla() {
         boolean sisalla = p.peliAlueenSisalla();
-        
+
         assertEquals(true, sisalla);
-        
+
         //ylös rajalle
         p.liikuY(-60);
         sisalla = p.peliAlueenSisalla();
         assertEquals(true, sisalla);
-        
+
         //rajan yli
         p.liikuY(-1);
         sisalla = p.peliAlueenSisalla();
         assertEquals(false, sisalla);
-        
+
         //alas rajalle
         p.liikuY(61 + 370);
         sisalla = p.peliAlueenSisalla();
         assertEquals(true, sisalla);
-        
+
         //rajan yli
         p.liikuY(1);
         sisalla = p.peliAlueenSisalla();
         assertEquals(false, sisalla);
+    }
+
+    //testi22
+    @Test
+    public void kuoleminenToimii() {
+        boolean elos = p.getElossa(); //elossa alkuun
+        assertEquals(true, elos);
+        p.kuolee();
+        elos = p.getElossa();
+        assertEquals(false, elos);
+
     }
 
 }

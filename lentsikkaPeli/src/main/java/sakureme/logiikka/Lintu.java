@@ -42,6 +42,18 @@ public class Lintu extends Hahmo {
         }
     }
 
+    public boolean getSuunta() {
+        return suunta;
+    }
+
+    public int getDx() {
+        return dx;
+    }
+
+    public int getDy() {
+        return dy;
+    }
+
     public void lataaKuva() {
         File tirppaTiedosto = new File("src/tirppa.png");
         kuva = new ImageIcon(tirppaTiedosto.getAbsolutePath()).getImage();

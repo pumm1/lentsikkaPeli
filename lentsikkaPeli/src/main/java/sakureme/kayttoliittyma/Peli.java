@@ -13,6 +13,7 @@ import sakureme.logiikka.Hahmo;
 import sakureme.logiikka.Lintu;
 import sakureme.logiikka.Pala;
 import sakureme.logiikka.Pelaaja;
+import sakureme.logiikka.Pilvi;
 import sakureme.logiikka.Puu;
 
 /**
@@ -31,8 +32,18 @@ public class Peli {
 
     //luodaan hahmot ja asetetaan ne paikalleen
     public void alustaHahmot() {
-        int x = arvoX();
-        int y = arvoPuuY();
+        List<Pala> b = new ArrayList<>();
+        int x = rand.nextInt(400) + 100;
+        int y = rand.nextInt(20) + 30;
+        Pilvi pilvi1 = new Pilvi(b, x, y);
+        pilvi1.lataaKuva();
+        x = rand.nextInt(450) + 500;
+        y = rand.nextInt(20) + 30;
+        Pilvi pilvi2 = new Pilvi(b, x, y);
+        pilvi2.lataaKuva();
+
+        x = arvoX();
+        y = arvoPuuY();
         Puu puu1 = new Puu(x, y, 100, 350);
         x = arvoX() + arvoX() + arvoX();
         y = arvoPuuY();
@@ -75,6 +86,7 @@ public class Peli {
         pelaaja.setPutoavuus(true);
         pelaaja.lataaKuva();
 
+        hahmot.add(pilvi1);
         hahmot.add(puu1);
         hahmot.add(puu2);
         hahmot.add(puu3);

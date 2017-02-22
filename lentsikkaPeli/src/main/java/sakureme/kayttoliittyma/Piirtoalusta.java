@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 import sakureme.logiikka.Hahmo;
 import sakureme.logiikka.Pelaaja;
+import sakureme.logiikka.Pilvi;
 
 public class Piirtoalusta extends JPanel implements ActionListener {
 
@@ -55,7 +56,12 @@ public class Piirtoalusta extends JPanel implements ActionListener {
                 i.putoa();
                 if (i.getPelattavuus() == false) {
                     i.liiku();
-                    if (i.getPalat().get(0).getX() <= -300) {
+                    if (i instanceof Pilvi) {
+                        if (((Pilvi) i).getX() <= -100){
+                            i.siirraUuteenPaikkaan();
+                            System.out.println("pilvi siirtyi");
+                        }
+                    } else if (i.getPalat().get(0).getX() <= -300) {
                         i.siirraUuteenPaikkaan();
                     }
                 }
