@@ -52,7 +52,6 @@ public class Pilvi extends Hahmo {
      * @throws IOException
      */
     public void lataaKuva() throws IOException {
-//        File pilviTiedosto = new File("src/main/resources/pilvi.png");
         InputStream is = getClass().getClassLoader().getResourceAsStream("pilvi.png");
         BufferedImage im = ImageIO.read(is);
         kuva = kuva = (BufferedImage) im;
@@ -96,7 +95,7 @@ public class Pilvi extends Hahmo {
             yy = 0 + rand.nextInt(15);
         }
         y += yy;
-        int tempX = rand.nextInt(400) + 800;
+        int tempX = rand.nextInt(400) + 900;
         x += tempX;
     }
 
