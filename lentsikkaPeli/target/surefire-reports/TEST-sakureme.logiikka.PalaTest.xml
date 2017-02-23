@@ -66,7 +66,7 @@
   <testcase classname="sakureme.logiikka.PalaTest" name="konstruktoriToimiiOikein" time="0"/>
   <testcase classname="sakureme.logiikka.PalaTest" name="palatTunnistavatOsumanOikea" time="0"/>
   <testcase classname="sakureme.logiikka.PalaTest" name="palatTunnistavatOsumanVasen" time="0"/>
-  <testcase classname="sakureme.logiikka.PalaTest" name="palatTunnistavatOsumanAlhaalla" time="0"/>
+  <testcase classname="sakureme.logiikka.PalaTest" name="palatTunnistavatOsumanAlhaalla" time="0.001"/>
   <testcase classname="sakureme.logiikka.PalaTest" name="liikkuminenToimiiX" time="0"/>
   <testcase classname="sakureme.logiikka.PalaTest" name="liikkuminenToimiiY" time="0"/>
 </testsuite>

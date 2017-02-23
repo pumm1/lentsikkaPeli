@@ -63,5 +63,5 @@
   </properties>
   <testcase classname="sakureme.logiikka.PilviTest" name="siirtoUuteenPaikkaanToimii" time="0"/>
   <testcase classname="sakureme.logiikka.PilviTest" name="liikkuminenToimii" time="0"/>
-  <testcase classname="sakureme.logiikka.PilviTest" name="kuvanLatausToimii" time="0.003"/>
+  <testcase classname="sakureme.logiikka.PilviTest" name="kuvanLatausToimii" time="0.004"/>
 </testsuite>

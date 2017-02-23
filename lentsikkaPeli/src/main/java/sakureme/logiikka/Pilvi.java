@@ -86,7 +86,7 @@ public class Pilvi extends Hahmo {
      *
      */
     public void siirraUuteenPaikkaan() {
-        dx = rand.nextInt(3) + 2;
+        dx = rand.nextInt(4) + 3;
         dx = dx * (-1);
         int yy = rand.nextInt(20) + 30;
         if (y >= 100) {   //estetään pilven meno liian alas
@@ -96,7 +96,7 @@ public class Pilvi extends Hahmo {
             yy = 0 + rand.nextInt(15);
         }
         y += yy;
-        int tempX = rand.nextInt(100) + 800;
+        int tempX = rand.nextInt(400) + 800;
         x += tempX;
     }
 

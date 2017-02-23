@@ -60,7 +60,7 @@ public class Kayttoliittyma implements Runnable {
         alusta.setHahmo(pelaaja);
         c.add(alusta);
 
-        frame.addKeyListener(new Kuuntelija(pelaaja, alusta));
+        frame.addKeyListener(new Kuuntelija(pelaaja, alusta, alusta.getTimer(), hahmot));
     }
 
     @Override

@@ -29,9 +29,12 @@ public class Piirtoalusta extends JPanel implements ActionListener {
         timer.start();
     }
 
+    public Timer getTimer() {
+        return timer;
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
-
         super.paintComponent(g);
         for (Hahmo i : hahmot) {
             i.piirraPalat(g);
@@ -57,7 +60,7 @@ public class Piirtoalusta extends JPanel implements ActionListener {
                 if (i.getPelattavuus() == false) {
                     i.liiku();
                     if (i instanceof Pilvi) {
-                        if (((Pilvi) i).getX() <= -100) {
+                        if (((Pilvi) i).getX() <= -300) {
                             i.siirraUuteenPaikkaan();
                         }
                     } else if (i.getPalat().get(0).getX() <= -300) {

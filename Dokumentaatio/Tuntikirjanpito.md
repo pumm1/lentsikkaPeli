@@ -33,3 +33,4 @@ Päivä | Tunnit | Kuvaus
 21.02.2017 |0,5h| Testien hiomista
 22.02.2017 |1,0h| Vaarattomien pilvien lisääminen
 22.02.2017 |1,0h| Testejä ja dokumentaatiota
+23.02.2017 |2,5h| Reset-mahdollisuus, piti luopua Game Over-teksteistä

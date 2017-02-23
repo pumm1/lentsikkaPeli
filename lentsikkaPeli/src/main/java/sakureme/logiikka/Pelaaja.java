@@ -5,6 +5,7 @@
  */
 package sakureme.logiikka;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -32,6 +33,10 @@ public class Pelaaja extends Hahmo {
     private int sec; //sekunnit
     private int msec; //millisekunnit
     private String gameOver;
+    private int x1 = 180;
+    private int y1 = 200;
+    private int y2 = 250;
+    private int x2 = 1000;
 
     /**
      * konstruktori saa parametreina palat, jotka muodostavat lentokoneen
@@ -95,6 +100,12 @@ public class Pelaaja extends Hahmo {
         return elossa;
     }
 
+    public void palautaEloon() {
+        elossa = true;
+        alku = System.currentTimeMillis();
+        loppu = alku;
+    }
+
     public void kuolee() {  // rip :(
         elossa = false;
         loppu = System.currentTimeMillis();
@@ -106,6 +117,18 @@ public class Pelaaja extends Hahmo {
 
     @Override
     public void piirraPalat(Graphics g) {
+        String time;
+        loppu = System.currentTimeMillis();
+        long temp = loppu - alku;
+        aika = (int) temp;
+        msec = aika % 1000;
+        sec = (aika - msec) / 1000;
+
+        time = "Aika: " + sec + "," + msec + "s";
+
+        g.setFont(new Font("Arial", Font.PLAIN, 20));
+        g.setColor(Color.black);
+        g.drawString(time, 30, 420);
         if (ladattu) {
             int x = this.getPalat().get(0).getX();
             int y = this.getPalat().get(0).getY();
@@ -115,18 +138,7 @@ public class Pelaaja extends Hahmo {
                 i.piirra(g);
             }
         }
-        if (!elossa) {      //annetaan selkeämpi merkki pelaajalle pelin päättymisestä
-            String s = Integer.toString(sec);
-            String ms = Integer.toString(msec);
-            if (gameOver == null) {
-                int i = rand.nextInt(loput.size());
-                gameOver = loput.get(i);
-            }
-            String time = "Aika: " + sec + "," + msec + "s";
-            g.setFont(new Font("Arial", Font.PLAIN, 40));
-            g.drawString(gameOver, 180, 200);
-            g.drawString(time, 180, 250);
-        }
+
     }
 
 }

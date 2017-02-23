@@ -43,6 +43,15 @@ public class Peli {
         Pilvi pilvi2 = new Pilvi(b, x, y);
         pilvi2.lataaKuva();
 
+        List<Pala> hahmoPalat = new ArrayList<>();
+        hahmoPalat.add(new Pala(50, 50, 15, 25));
+        hahmoPalat.add(new Pala(50, 75, 100, 23));
+        hahmoPalat.add(new Pala(105, 50, 25, 50));
+
+        Pelaaja pelaaja = new Pelaaja(hahmoPalat);
+        pelaaja.setPutoavuus(true);
+        pelaaja.lataaKuva();
+
         x = arvoX();
         y = arvoPuuY();
         Puu puu1 = new Puu(x, y, 100, 350);
@@ -76,16 +85,6 @@ public class Peli {
 
         x = rand.nextInt(500) + 200;
         y = rand.nextInt(250) + 100;
-
-        //luodaan pelattava hahmo
-        List<Pala> hahmoPalat = new ArrayList<>();
-        hahmoPalat.add(new Pala(50, 50, 15, 25));
-        hahmoPalat.add(new Pala(50, 75, 100, 23));
-        hahmoPalat.add(new Pala(105, 50, 25, 50));
-
-        Pelaaja pelaaja = new Pelaaja(hahmoPalat);
-        pelaaja.setPutoavuus(true);
-        pelaaja.lataaKuva();
 
         hahmot.add(pilvi1);
         hahmot.add(pilvi2);
