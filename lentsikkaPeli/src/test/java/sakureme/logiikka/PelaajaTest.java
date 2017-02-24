@@ -84,4 +84,20 @@ public class PelaajaTest {
         assertEquals(true, toimii);
     }
 
+    //testi29
+    @Test
+    public void eloonPalauttaminenToimii() {
+        boolean elossa = p.getElossa();
+        assertEquals(true, elossa);
+
+        p.kuolee();
+        elossa = p.getElossa();
+        assertEquals(false, elossa);
+
+        p.palautaEloon();
+
+        elossa = p.getElossa();
+        assertEquals(true, elossa);
+    }
+
 }
