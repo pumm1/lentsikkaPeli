@@ -120,7 +120,7 @@ public class Lintu extends Hahmo {
         if (palat.get(0).getY() >= 100) {   //estetään linnun meno liian alas
             y = y * (-1);
         }
-        if (y < 0) {
+        if (y <= 0) {
             y = 0 + rand.nextInt(15);
         }
         this.liikuY(y);
