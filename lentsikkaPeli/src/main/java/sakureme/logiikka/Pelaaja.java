@@ -118,7 +118,9 @@ public class Pelaaja extends Hahmo {
     @Override
     public void piirraPalat(Graphics g) {
         String time;
-        loppu = System.currentTimeMillis();
+        if (elossa) {
+            loppu = System.currentTimeMillis();
+        }
         long temp = loppu - alku;
         aika = (int) temp;
         msec = aika % 1000;

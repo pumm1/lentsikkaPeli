@@ -34,3 +34,4 @@ P‰iv‰ | Tunnit | Kuvaus
 22.02.2017 |1,0h| Vaarattomien pilvien lis‰‰minen
 22.02.2017 |1,0h| Testej‰ ja dokumentaatiota
 23.02.2017 |2,5h| Reset-mahdollisuus, piti luopua Game Over-teksteist‰
+01.03.2017 |1,0h| Dokumentointia ja lintujen siirto ei en‰‰ ved‰ lintuja liian alas

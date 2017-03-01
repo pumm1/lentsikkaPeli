@@ -19,13 +19,16 @@ lintu liikkuu.
 ###liiku()
 Liikkumista on myös hankala testata, koska linnun alkuarvo dy:lle vaihtelee
 välillä [-3,3]. Mutta jokaisella kerralla kun lintu liikkuu, se liikkuu
-x-suunnassa dx:n verran ja y-suunnassa dy:n verran. Kun dy == 5 (tai -5) 
+x-suunnassa dx:n verran ja y-suunnassa dy:n verran. Kun dy = 5 (tai -5) 
 metodin suorituksen alussa, suunta vaihdetaan päinvastaiseksi, kuin mitä se
 aiemmin oli. Muutoin dy kasvaa tai vähenee yhdellä, riippuen suunnasta. Näin
 linnun lentorata saadaan aaltomaiseksi.
 Toteutus toimii, koska jokaiselle suunnalle on selvä raja, jonka dy voi
 saavuttaa ja muutoin dy vain muuttaa arvoaan yhdellä suuntaan tai toiseen,
 riippuen mikä suunta sillä hetkellä on.
+
+##siirraUuteenPaikkaan()
+
 
 ##Pala
 

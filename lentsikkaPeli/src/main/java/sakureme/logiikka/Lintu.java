@@ -116,14 +116,14 @@ public class Lintu extends Hahmo {
     public void siirraUuteenPaikkaan() {
         dx = rand.nextInt(10) + 6;
         dx = dx * (-1);
-        int y = rand.nextInt(40) + 60;
+        int tempY = rand.nextInt(40) + 80;
         if (palat.get(0).getY() >= 100) {   //estetään linnun meno liian alas
-            y = y * (-1);
+            tempY = tempY * (-1);
         }
-        if (y <= 0) {
-            y = 0 + rand.nextInt(15);
+        if (palat.get(0).getY() <= 0) {
+            tempY = 0 + rand.nextInt(15);
         }
-        this.liikuY(y);
+        this.liikuY(tempY);
         int tempX = rand.nextInt(500) + 1200 + rand.nextInt(400) + rand.nextInt(400);
         this.liikuX(tempX);
     }
