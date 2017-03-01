@@ -121,7 +121,7 @@ public class Lintu extends Hahmo {
             tempY = tempY * (-1);
         }
         if (palat.get(0).getY() <= 0) {
-            tempY = 0 + rand.nextInt(15);
+            tempY = 10 + rand.nextInt(15);
         }
         this.liikuY(tempY);
         int tempX = rand.nextInt(500) + 1200 + rand.nextInt(400) + rand.nextInt(400);
