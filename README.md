@@ -7,7 +7,7 @@ mahdollisimman pitkään, samalla esteitä väistellen.
 ##Dokumentaatio
 [Tuntikirjanpito](Dokumentaatio/Tuntikirjanpito.md)
 [Aiheenmäärittely](Dokumentaatio/Aiheenmaarittely.md)
-[pit-raportti](https://htmlpreview.github.io/?https://github.com/pumm1/lentsikkaPeli/blob/master/Dokumentaatio/pit/201703012200/index.html)
+[pit-raportti](https://htmlpreview.github.io/?https://github.com/pumm1/lentsikkaPeli/blob/master/Dokumentaatio/pit/201703012210/index.html)
 [checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/pumm1/lentsikkaPeli/blob/master/Dokumentaatio/checkstyle/checkstyle.html)
 [luokkakaavio](Dokumentaatio/luokkakaavio.png)
 [Käyttöohje](Dokumentaatio/Kayttoohje.md)
