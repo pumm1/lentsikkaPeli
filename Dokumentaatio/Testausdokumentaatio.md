@@ -28,7 +28,16 @@ saavuttaa ja muutoin dy vain muuttaa arvoaan yhdell‰ suuntaan tai toiseen,
 riippuen mik‰ suunta sill‰ hetkell‰ on.
 
 ##siirraUuteenPaikkaan()
-
+Linnun siirrossa muuttuja dx s aa uuden arvon v‰lill‰ [-15,-6], joka m‰‰r‰‰
+linnun nopeuden x-suunnassa (dx siis kerrotaan luvulla (-1), jotta suunta 
+olisi myˆs vasemmalle, kohti pelaajaa). T‰m‰n j‰lkeen muuttuja tempY saa
+arvon v‰lilt‰ [80, 119] ja t‰ll‰ m‰‰r‰t‰‰n se, paljonlo lintu vaihtaa 
+paikkaansa y-suunnassa. Jos linnun y-koordinaatti on suurempi kuin 100,
+kerrotaan tempY luvulla (-1), jolloin linnun paikka ei p‰‰se liian alas.
+Jos linnun y-koordinaatti on nolla tai pienempi, tempY asetetaan v‰lille
+[10, 24], jolloin lintu pysyy varmasti pelialueen sis‰ll‰.
+Muuttuja tempX arvotaan v‰lille[1200, 2497], mik‰ on m‰‰r‰ jonka lintu
+siirtyy x-akselilla uuteen paikkaan oikealle.
 
 ##Pala
 
