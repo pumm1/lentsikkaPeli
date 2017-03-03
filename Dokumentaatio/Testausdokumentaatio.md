@@ -27,7 +27,7 @@ Toteutus toimii, koska jokaiselle suunnalle on selv‰ raja, jonka dy voi
 saavuttaa ja muutoin dy vain muuttaa arvoaan yhdell‰ suuntaan tai toiseen,
 riippuen mik‰ suunta sill‰ hetkell‰ on.
 
-##siirraUuteenPaikkaan()
+###siirraUuteenPaikkaan()
 Linnun siirrossa muuttuja dx s aa uuden arvon v‰lill‰ [-15,-6], joka m‰‰r‰‰
 linnun nopeuden x-suunnassa (dx siis kerrotaan luvulla (-1), jotta suunta 
 olisi myˆs vasemmalle, kohti pelaajaa). T‰m‰n j‰lkeen muuttuja tempY saa
@@ -39,10 +39,46 @@ Jos linnun y-koordinaatti on nolla tai pienempi, tempY asetetaan v‰lille
 Muuttuja tempX arvotaan v‰lille[1200, 2497], mik‰ on m‰‰r‰ jonka lintu
 siirtyy x-akselilla uuteen paikkaan oikealle.
 
+###piirraPalat()
+T‰m‰n testaaminen on j‰tetty v‰liin, koska Graphics-olioiden testaaminen
+on suhteellisen hankalaa. Kuitenkin, metodi piirt‰‰ linnun kuvan, jos linnun
+kuva on ladattuna, muutoin piirret‰‰n linnun palat, jotka n‰ytt‰v‰t osuma-alueen.
+
 ##Pala
+###piirra()
+T‰m‰n testaaminen on j‰tetty v‰liin, koska Graphics-olioiden testaaminen
+on suhteellisen hankalaa. Metodin idea on kuitenkin piirt‰‰ palan parametrien
+nelikulmio.
 
 ##Pelaaaja
+###kuolee()
+Metodin p‰‰asiallinen toiminta on testattu, mutta testit eiv‰t kata ajan
+mittaamista. Ajan testaaminen on hankalaa, koska testien aikana on hankala tiet‰‰,
+mit‰ asioita k‰sitell‰‰n mill‰kin hetkell‰ ja tulokset voivat vaihdella suurestikin.
+Ideana on kuitenkin, ett‰ otetaan systeemin aika millisekunteinta muuttujaan loppu ja
+temp = loppu - alku, jolloin saadaan millisekunteina aika, joka on kulunut pelin alusta.
+Msec-muuttuja ottaa aika-muuttujan jakoj‰‰nnˆksen tuhannesta, jolloin sekunnin
+murto-osat saadaan laskettua ja sec-muuttuja ottaa aika-muuttujalta msec-muuttujan
+avulla kokonaiset sekunnit.
+
+###piirraPalat()
+T‰m‰n testaaminen on j‰tetty v‰liin, koska Graphics-olioiden testaaminen
+on suhteellisen hankalaa. Idea on kuitenkin sama, kuin linnulla.
+Metodissa on pieni ero siin‰, ett‰ alussa tarkistetaan, onko hahmo viel‰
+elossa ja p‰ivitet‰‰n loppu-muuttujan arvo, jotta aika saadaan p‰ivitetty‰
+pelaajan tietoon alanurkkaan (aikaa k‰sittelev‰t muuttujat toimivat samalla
+tapaa, kuin kuolee()-metodissa). Jos hahmo ei ole elossa, loppu-muuttujan arvo
+ei p‰‰se muuttumaan, jolloin pelaaja ei voi huijata saaneensa parempaa aikaa.
+Testaaminen totetutettu kokeilemalla painaa eri nappeja kuoleman j‰lkeen.
 
 ##Pilvi
+###siirraUuteenPaikkaan()
+Testauksessa ei ole onnistuttu huomioimaan satunnaisia kohtia metodissa.
+yy-muuttujasta otetaan vastaluku kertomalla (-1):ll‰, jos y >= 100, jolloin
+pilvi ei p‰‰se laskeutumaan liian alas pelialuetta.  Jos y < 0, yy-muuttuja
+asetetaan v‰lille [10,24], jolloin se ei p‰‰se nousemaan pelialueesta liian
+korkeallekaan. Lopuksi pilven y-koordinaattin lis‰t‰‰n muuttujan yy arvo ja 
+tempX asetetaan v‰lille [900, 1299], mik‰ on pituus jonka pilvi siirtyy
+x-suunnassa pelialueen oikealle.
 
 ##Puu

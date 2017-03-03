@@ -92,7 +92,7 @@ public class Pilvi extends Hahmo {
             yy = yy * (-1);
         }
         if (yy < 0) {
-            yy = 0 + rand.nextInt(15);
+            yy = 10 + rand.nextInt(15);
         }
         y += yy;
         int tempX = rand.nextInt(400) + 900;
