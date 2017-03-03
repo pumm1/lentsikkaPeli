@@ -11,3 +11,4 @@ mahdollisimman pitkään, samalla esteitä väistellen.
 [checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/pumm1/lentsikkaPeli/blob/master/Dokumentaatio/checkstyle/checkstyle.html)
 [luokkakaavio](Dokumentaatio/luokkakaavio.png)
 [Käyttöohje](Dokumentaatio/Kayttoohje.md)
+[Testidokumentointia](Dokumentaatio/Testausdokumentaatio.md)

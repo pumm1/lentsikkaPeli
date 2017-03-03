@@ -82,3 +82,13 @@ tempX asetetaan välille [900, 1299], mikä on pituus jonka pilvi siirtyy
 x-suunnassa pelialueen oikealle.
 
 ##Puu
+###konstruktori
+Dx-muuttujalle arvotaan uusi arvo väliltä [-7,-3], jolloin puu liikkuu aina
+x-suunnassa oikealta vasemmalle. (Alkuun vähän hitaampi ja helpompi väistää)
+
+###siirraUuteenPaikkaan()
+Dx-muuttujalle arvotaan taas uusi arvo väliltä [-12, -5]. Y-muuttuja arvotaan
+välille [30, 79] ja jos puun ensimmäisen palan y-koordinaatti on >=280, y-muuttujan 
+arvo kerrotan (-1):llä, jotta y-suunnassa liikkuminen ei tapahdu aina samaan suuntaan.
+Muuttuja tempX määrää taas puun siirron x-suunnassa oikealle, kuten esim. Pilvellä.
+Muuttujan arvo on vain hiukan eri.
