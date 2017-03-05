@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="sakureme.logiikka.PelaajaTest" time="0.005" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="sakureme.logiikka.PelaajaTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
@@ -63,6 +63,6 @@
   </properties>
   <testcase classname="sakureme.logiikka.PelaajaTest" name="kuoleminenToimii" time="0"/>
   <testcase classname="sakureme.logiikka.PelaajaTest" name="tunnistaaPeliAlueenSisalla" time="0"/>
-  <testcase classname="sakureme.logiikka.PelaajaTest" name="kuvanLatausToimii" time="0.004"/>
+  <testcase classname="sakureme.logiikka.PelaajaTest" name="kuvanLatausToimii" time="0.005"/>
   <testcase classname="sakureme.logiikka.PelaajaTest" name="eloonPalauttaminenToimii" time="0"/>
 </testsuite>
