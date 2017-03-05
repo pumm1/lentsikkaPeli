@@ -1199,16 +1199,16 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@44a085e5_81'/>
 81
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_81'>1</a>
 <span>
 
-1. getY : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
+1. getY : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        return y;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return y;</span></pre></td></tr>
 
 
 <tr>
@@ -1334,16 +1334,16 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@44a085e5_90'/>
 90
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_90'>1</a>
 <span>
 
-1. siirraUuteenPaikkaan : Replaced integer addition with subtraction &rarr; SURVIVED<br/>
+1. siirraUuteenPaikkaan : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        int yy = rand.nextInt(20) + 30;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        int yy = rand.nextInt(20) + 30;</span></pre></td></tr>
 
 
 <tr>
@@ -1351,18 +1351,18 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@44a085e5_91'/>
 91
 </td>
-<td class='killed'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_91'>2</a>
 <span>
 
-1. siirraUuteenPaikkaan : changed conditional boundary &rarr; KILLED<br/>
+1. siirraUuteenPaikkaan : negated conditional &rarr; SURVIVED<br/>
 
-2. siirraUuteenPaikkaan : negated conditional &rarr; KILLED<br/>
+2. siirraUuteenPaikkaan : changed conditional boundary &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        if (y &#62;= 100) {   //estet&#195;&#164;&#195;&#164;n pilven meno liian alas</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>        if (y &#62;= 100) {   //estet&#195;&#164;&#195;&#164;n pilven meno liian alas</span></pre></td></tr>
 
 
 <tr>
@@ -1406,9 +1406,9 @@ body{
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_94'>2</a>
 <span>
 
-1. siirraUuteenPaikkaan : negated conditional &rarr; SURVIVED<br/>
+1. siirraUuteenPaikkaan : changed conditional boundary &rarr; SURVIVED<br/>
 
-2. siirraUuteenPaikkaan : changed conditional boundary &rarr; KILLED<br/>
+2. siirraUuteenPaikkaan : negated conditional &rarr; SURVIVED<br/>
 
 </span>
 </td>
@@ -1485,16 +1485,16 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@44a085e5_99'/>
 99
 </td>
-<td class='killed'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_99'>1</a>
 <span>
 
-1. siirraUuteenPaikkaan : Replaced integer addition with subtraction &rarr; KILLED<br/>
+1. siirraUuteenPaikkaan : Replaced integer addition with subtraction &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        x += tempX;</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>        x += tempX;</span></pre></td></tr>
 
 
 <tr>
@@ -1695,7 +1695,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_81'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getY<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getY<br/><b>Killed by : </b>sakureme.logiikka.PilviTest.siirtoUuteenPaikkaanToimii(sakureme.logiikka.PilviTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -1728,7 +1728,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_90'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; SURVIVED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>sakureme.logiikka.PilviTest.siirtoUuteenPaikkaanToimii(sakureme.logiikka.PilviTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -1739,7 +1739,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_91'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>sakureme.logiikka.PilviTest.siirtoUuteenPaikkaanToimii(sakureme.logiikka.PilviTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>sakureme.logiikka.PilviTest.siirtoUuteenPaikkaanToimii(sakureme.logiikka.PilviTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>sakureme.logiikka.PilviTest.siirtoUuteenPaikkaanToimii(sakureme.logiikka.PilviTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
 </td>
 </tr>
 
@@ -1761,7 +1761,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_94'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>sakureme.logiikka.PilviTest.siirtoUuteenPaikkaanToimii(sakureme.logiikka.PilviTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
 </td>
 </tr>
 
@@ -1805,7 +1805,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@44a085e5_99'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>sakureme.logiikka.PilviTest.siirtoUuteenPaikkaanToimii(sakureme.logiikka.PilviTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>siirraUuteenPaikkaan<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; SURVIVED</p> 
 </td>
 </tr>
 
@@ -1844,7 +1844,7 @@ body{
 
 <h2>Tests examined</h2>
 <ul>
-<li>sakureme.logiikka.PilviTest.liikkuminenToimii(sakureme.logiikka.PilviTest) (0 ms)</li><li>sakureme.logiikka.PilviTest.kuvanLatausToimii(sakureme.logiikka.PilviTest) (16 ms)</li><li>sakureme.logiikka.PilviTest.siirtoUuteenPaikkaanToimii(sakureme.logiikka.PilviTest) (0 ms)</li>
+<li>sakureme.logiikka.PilviTest.liikkuminenToimii(sakureme.logiikka.PilviTest) (0 ms)</li><li>sakureme.logiikka.PilviTest.kuvanLatausToimii(sakureme.logiikka.PilviTest) (4 ms)</li><li>sakureme.logiikka.PilviTest.siirtoUuteenPaikkaanToimii(sakureme.logiikka.PilviTest) (0 ms)</li>
 </ul>
 
 <br/>
