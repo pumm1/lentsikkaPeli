@@ -35,3 +35,4 @@ Päivä | Tunnit | Kuvaus
 22.02.2017 |1,0h| Testejä ja dokumentaatiota
 23.02.2017 |2,5h| Reset-mahdollisuus, piti luopua Game Over-teksteistä
 01.03.2017 |1,0h| Dokumentointia ja lintujen siirto ei enää vedä lintuja liian alas
+03.03.2017 |0,5h| Pientä säätöä ja dokumentointia
